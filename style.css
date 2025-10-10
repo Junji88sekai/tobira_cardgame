@@ -102,10 +102,12 @@ button:hover {
   display: block;
 }
 
-/* ▼▼▼ ボタンの margin-top をリセット ▼▼▼ */
-.navigation-buttons, .reset-area {
-  margin-top: 0; /* flexレイアウトで管理するため0に戻す */
-  text-align: center;
+.button-group {
+  display: flex; /* これで中の要素が横並びになります */
+  justify-content: center; /* 全体を中央に寄せます */
+  align-items: center; /* ボタンの高さを中央で揃えます */
+  gap: 15px; /* ボタン同士の隙間を15px空けます */
+  width: 100%; /* 横幅いっぱいに広がります */
 }
 
 #reset-learned-button {
@@ -115,3 +117,4 @@ button:hover {
 #reset-learned-button:hover {
   background-color: #c82333;
 }
+
