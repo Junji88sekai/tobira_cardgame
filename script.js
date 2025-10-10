@@ -1,3 +1,4 @@
+alert("JavaScriptは動いています！");
 document.addEventListener('DOMContentLoaded', () => {
   // HTML要素を取得
   const lessonCheckboxesContainer = document.getElementById('lesson-checkboxes');
@@ -128,3 +129,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
