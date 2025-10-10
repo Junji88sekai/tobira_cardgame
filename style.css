@@ -50,7 +50,7 @@ button:hover {
 }
 
 .flashcard {
-  width: 150%;
+  width: 100%;
   height: 300px;
   perspective: 1000px;
   cursor: pointer;
@@ -105,4 +105,5 @@ button:hover {
 #reset-learned-button:hover {
   background-color: #c82333;
 }
+
 
