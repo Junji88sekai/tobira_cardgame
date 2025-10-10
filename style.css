@@ -94,7 +94,7 @@ button:hover {
 }
 
 .navigation-buttons, .reset-area {
-  margin-top: 100px;
+  margin-top: 60px;
   text-align: center;
 }
 
@@ -105,5 +105,6 @@ button:hover {
 #reset-learned-button:hover {
   background-color: #c82333;
 }
+
 
 
