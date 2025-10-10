@@ -88,8 +88,8 @@ button:hover {
 }
 
 .card-image {
-  max-height: 95%; /* カードの高さに合わせて調整 */
-  max-width: 95%;  /* カードの幅に合わせて調整 */
+  max-height: 95%;
+  max-width: 95%;
   display: block;
 }
 
