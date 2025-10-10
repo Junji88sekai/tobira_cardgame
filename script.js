@@ -128,3 +128,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+// ▼▼▼ キーボード操作のコード ▼▼▼
+  document.addEventListener('keydown', (event) => {
+    // ゲーム画面が表示されている時だけ操作を有効にする
+    if (gameArea.style.display === 'block') {
+      switch (event.key) {
+        case 'ArrowRight':
+          // 右矢印キーで「次へ」ボタンをクリック
+          nextButton.click();
+          break;
+        case 'ArrowDown':
+        case 'ArrowUp':
+          // 上下矢印キーでカードをクリックして裏返す
+          flashcard.click();
+          break;
+      }
+    }
+  });
