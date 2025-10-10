@@ -1,237 +1,116 @@
 body {
-
-  font-family: sans-serif;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  background-color: #f0f4f8;
-
-  color: #333;
-
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f4f8;
+  color: #333;
 }
-
-
 
 h1 {
-
-  color: #2c3e50;
-
+  color: #2c3e50;
 }
-
-
-
-/* ▼▼▼ game-container に display: flex; などを追加 ▼▼▼ */
 
 .settings-container, .game-container {
-
-  background-color: white;
-
-  padding: 20px 25px;
-
-  margin: 20px;
-
-  border-radius: 8px;
-
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-
-  width: 90%;
-
-  max-width: 600px;
-
-  /* ここから追加 */
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
+  background-color: white;
+  padding: 20px 25px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-
 
 .setting-group {
-
-  margin-bottom: 15px;
-
-  border-top: 1px solid #eee;
-
-  padding-top: 15px;
-
-  width: 100%; 
-
+  margin-bottom: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  width: 100%; 
 }
-
-
 
 #lesson-checkboxes label {
-
-  margin-right: 10px;
-
-  display: inline-block;
-
-  padding: 5px;
-
+  margin-right: 10px;
+  display: inline-block;
+  padding: 5px;
 }
-
-
 
 button {
-
-  padding: 10px 20px;
-
-  font-size: 16px;
-
-  cursor: pointer;
-
-  border: none;
-
-  border-radius: 5px;
-
-  color: white;
-
-  background-color: #007bff;
-
-  transition: background-color 0.3s;
-
-  margin-top: 10px;
-
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #007bff;
+  transition: background-color 0.3s;
+  margin-top: 10px;
 }
-
-
 
 button:hover {
-
-  background-color: #0056b3;
-
+  background-color: #0056b3;
 }
-
-
-
-/* ▼▼▼ flashcard の高さを大きく設定 ▼▼▼ */
 
 .flashcard {
-
-  width: 100%;
-
-  height: 450px; /* ← カードの高さを大きくする (例: 450px) */
-
-  perspective: 1000px;
-
-  cursor: pointer;
-
-  margin-bottom: 20px; /* カードとボタンの間の余白を確保 */
-
-  margin-top: 0; /* 上の余白をリセット */
-
+  width: 100%;
+  height: 450px; /* カードの高さを大きく設定 */
+  perspective: 1000px;
+  cursor: pointer;
+  margin-bottom: 20px; /* カードとボタンの間の余白を確保 */
+  margin-top: 0;
 }
-
-
 
 .card-inner {
-
-  position: relative;
-
-  width: 100%;
-
-  height: 100%;
-
-  transition: transform 0.6s;
-
-  transform-style: preserve-3d;
-
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
-
-
 
 .flashcard.is-flipped .card-inner {
-
-  transform: rotateY(180deg);
-
+  transform: rotateY(180deg);
 }
-
-
 
 .card-front, .card-back {
-
-  position: absolute;
-
-  width: 100%;
-
-  height: 100%;
-
-  -webkit-backface-visibility: hidden;
-
-  backface-visibility: hidden;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  background-color: #fff;
-
-  border: 1px solid #ccc;
-
-  border-radius: 8px;
-
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
-
-
 
 .card-back {
-
-  transform: rotateY(180deg);
-
+  transform: rotateY(180deg);
 }
 
-
-
-/* ▼▼▼ card-image のサイズを修正 ▼▼▼ */
-
+/* ▼▼▼ ここを修正 ▼▼▼ */
 .card-image {
-
-  max-height: 150%; /* カードの高さの95%までに制限 */
-
-  max-width: 150%;  /* カードの幅の95%までに制限 */
-
-  display: block;
-
+  max-height: 95%; /* カードの枠内に収まるように95%に変更 */
+  max-width: 95%;  /* カードの枠内に収まるように95%に変更 */
+  display: block;
 }
-
-
 
 .button-group {
-
-  display: flex; /* これで中の要素が横並びになります */
-
-  justify-content: center; /* 全体を中央に寄せます */
-
-  align-items: center; /* ボタンの高さを中央で揃えます */
-
-  gap: 15px; /* ボタン同士の隙間を15px空けます */
-
-  width: 100%; /* 横幅いっぱいに広がります */
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
 }
-
-
 
 #reset-learned-button {
-
-  background-color: #dc3545;
-
+  background-color: #dc3545;
 }
 
-
-
 #reset-learned-button:hover {
-
-  background-color: #c82333;
-
+  background-color: #c82333;
 }
