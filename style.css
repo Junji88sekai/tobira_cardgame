@@ -97,8 +97,8 @@ button:hover {
 
 /* ▼▼▼ card-image のサイズを修正 ▼▼▼ */
 .card-image {
-  max-height: 95%; /* カードの高さの95%までに制限 */
-  max-width: 95%;  /* カードの幅の95%までに制限 */
+  max-height: 150%; /* カードの高さの95%までに制限 */
+  max-width: 150%;  /* カードの幅の95%までに制限 */
   display: block;
 }
 
@@ -117,4 +117,5 @@ button:hover {
 #reset-learned-button:hover {
   background-color: #c82333;
 }
+
 
