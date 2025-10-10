@@ -3,13 +3,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const lessonCheckboxesContainer = document.getElementById('lesson-checkboxes');
   const startButton = document.getElementById('start-button');
   const gameArea = document.getElementById('game-area');
+  const settingsContainer = document.querySelector('.settings-container');
   const flashcard = document.getElementById('flashcard');
-  const cardFront = document.querySelector('.card-front');
-  const cardBack = document.querySelector('.card-back');
   const nextButton = document.getElementById('next-button');
   const markLearnedButton = document.getElementById('mark-learned-button');
   const resetLearnedButton = document.getElementById('reset-learned-button');
   const progressIndicator = document.getElementById('progress-indicator');
+  
+  // カードの表面・裏面の要素を取得
+  const cardFrontText = document.querySelector('.card-front .card-text');
+  const cardBackText = document.querySelector('.card-back .card-text');
+  const cardFrontImage = document.querySelector('.card-front .card-image');
+  const cardBackImage = document.querySelector('.card-back .card-image');
   
   let currentCardIndex = 0;
   let activeCards = [];
@@ -41,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 対象となるカードをフィルタリング
     activeCards = cardData
-      .filter(data => selectedLessons.includes(data.lesson) && data.topic.endsWith(contentType))
+      .filter(data => selectedLessons.includes(data.lesson) && data.topic === contentType)
       .flatMap(data => data.words)
       .map((word, index) => ({ ...word, id: `${word.jp}-${index}` })); // 各カードにユニークIDを付与
 
@@ -59,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     currentCardIndex = 0;
-    document.querySelector('.settings-container').style.display = 'none';
+    settingsContainer.style.display = 'none';
     gameArea.style.display = 'block';
     displayCard();
   });
@@ -67,8 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // カードを表示する関数
   function displayCard() {
     if (currentCardIndex >= activeCards.length) {
-      cardFront.textContent = '完了！';
-      cardBack.textContent = 'お疲れ様でした！';
+      cardFrontText.textContent = '完了！';
+      cardBackText.textContent = 'お疲れ様でした！';
+      cardFrontImage.style.display = 'none';
+      cardBackImage.style.display = 'none';
       nextButton.disabled = true;
       markLearnedButton.disabled = true;
       progressIndicator.textContent = '全問終了';
@@ -77,19 +84,30 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const card = activeCards[currentCardIndex];
     const cardSide = document.querySelector('input[name="card-side"]:checked').value;
-    
-    // 表面と裏面を設定
+    const imagePath = card.image ? `image/${card.image}` : "";
+
+    // 以前の表示をクリア
+    cardFrontImage.style.display = 'none';
+    cardBackImage.style.display = 'none';
+
+    // 表面と裏面の内容を設定
     if (cardSide === 'jp') {
-      cardFront.textContent = card.jp;
-      cardBack.textContent = card.es;
+      cardFrontText.textContent = card.jp;
+      cardBackText.textContent = card.es;
     } else {
-      cardFront.textContent = card.es;
-      cardBack.textContent = card.jp;
+      cardFrontText.textContent = card.es;
+      cardBackText.textContent = card.jp;
+    }
+    
+    // 画像データがある場合のみ、画像を表示
+    if (imagePath) {
+      cardFrontImage.src = imagePath;
+      cardBackImage.src = imagePath; // 裏面にも同じ画像を設定
+      cardFrontImage.style.display = 'block';
+      cardBackImage.style.display = 'block';
     }
 
-    // カードを表面に戻す
     flashcard.classList.remove('is-flipped');
-    // 進捗を表示
     progressIndicator.textContent = `${currentCardIndex + 1} / ${activeCards.length}`;
     nextButton.disabled = false;
     markLearnedButton.disabled = false;
@@ -113,8 +131,10 @@ document.addEventListener('DOMContentLoaded', () => {
         learnedCards.push(cardId);
         localStorage.setItem('learnedCards', JSON.stringify(learnedCards));
     }
-    // 次のカードへ
-    currentCardIndex++;
+    activeCards.splice(currentCardIndex, 1); // 現在のカードをリストから削除
+    if (currentCardIndex >= activeCards.length) {
+      currentCardIndex = 0; // 最後尾のカードを覚えたら先頭に戻る
+    }
     displayCard();
   });
 
@@ -123,7 +143,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (confirm('本当に「覚えた」リストをリセットしますか？')) {
       learnedCards = [];
       localStorage.removeItem('learnedCards');
-      alert('リセットしました。');
+      alert('リセットしました。ページを再読み込みするか、新しいゲームを開始してください。');
+      gameArea.style.display = 'none';
+      settingsContainer.style.display = 'block';
     }
   });
 });
