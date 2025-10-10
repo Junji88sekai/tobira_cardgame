@@ -29,7 +29,15 @@
   </div>
 
   <div class="game-container" id="game-area" style="display: none;">
-    <p id="progress-indicator"></p>
+    
+    <div class="progress-container">
+      <span id="progress-indicator"></span>
+      <div class="jump-form">
+        <input type="number" id="jump-input" min="1">
+        <button id="jump-button">ジャンプ</button>
+      </div>
+    </div>
+
     <div class="flashcard" id="flashcard">
       <div class="card-inner">
         <div class="card-front">
@@ -40,11 +48,16 @@
         </div>
       </div>
     </div>
+
     <div class="button-group">
+      <button id="prev-button">戻る</button>
       <button id="mark-learned-button">覚えた！</button>
       <button id="next-button">次へ</button>
+    </div>
+    <div class="reset-area">
       <button id="reset-learned-button">「覚えた」をリセット</button>
     </div>
+
   </div>
 
   <script src="data.js"></script>
