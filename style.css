@@ -93,9 +93,13 @@ button:hover {
   display: block;
 }
 
-.navigation-buttons, .reset-area {
+.button-group, .reset-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* ボタン同士の隙間 */
+  width: 100%;
   margin-top: 20px;
-  text-align: center;
 }
 
 #reset-learned-button {
@@ -132,5 +136,6 @@ button:hover {
   font-size: 14px;
   margin-top: 0;
 }
+
 
 
