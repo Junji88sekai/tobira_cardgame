@@ -81,7 +81,6 @@ button:hover {
   flex-direction: column; /* 画像とテキストを縦に並べる */
   justify-content: center;
   align-items: center;
-  font-size: 24px;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-sizing: border-box;
