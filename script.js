@@ -127,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
       settingsContainer.style.display = 'block';
     }
   });
-});
 // ▼▼▼ キーボード操作のコード ▼▼▼
   document.addEventListener('keydown', (event) => {
     // ゲーム画面が表示されている時だけ操作を有効にする
@@ -145,3 +144,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+});
