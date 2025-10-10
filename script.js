@@ -5,10 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const gameArea = document.getElementById('game-area');
   const settingsContainer = document.querySelector('.settings-container');
   const flashcard = document.getElementById('flashcard');
+  const prevButton = document.getElementById('prev-button'); // ★追加
   const nextButton = document.getElementById('next-button');
   const markLearnedButton = document.getElementById('mark-learned-button');
   const resetLearnedButton = document.getElementById('reset-learned-button');
   const progressIndicator = document.getElementById('progress-indicator');
+  const jumpInput = document.getElementById('jump-input'); // ★追加
+  const jumpButton = document.getElementById('jump-button'); // ★追加
   
   // カードの表面・裏面の画像要素を取得
   const cardFrontImage = document.querySelector('.card-front .card-image');
@@ -56,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
       activeCards.sort(() => Math.random() - 0.5);
     }
     
+    jumpInput.max = activeCards.length; // ジャンプの上限を設定
     currentCardIndex = 0;
     settingsContainer.style.display = 'none';
     gameArea.style.display = 'block';
@@ -64,30 +68,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // カードを表示する関数
   function displayCard() {
-    if (currentCardIndex >= activeCards.length) {
+    if (activeCards.length === 0) {
       progressIndicator.textContent = '全問終了！お疲れ様でした。';
-      flashcard.style.display = 'none'; // カードを隠す
+      flashcard.style.display = 'none';
+      prevButton.disabled = true;
       nextButton.disabled = true;
       markLearnedButton.disabled = true;
       return;
     }
+
+    if (currentCardIndex >= activeCards.length) {
+      currentCardIndex = activeCards.length - 1;
+    }
+    if (currentCardIndex < 0) {
+      currentCardIndex = 0;
+    }
     
-    flashcard.style.display = 'block'; // カードを再表示
+    flashcard.style.display = 'block';
     const card = activeCards[currentCardIndex];
     
-    // 表（日本語）と裏（スペイン語）の画像パスを設定
     const frontImagePath = card.image_jp ? `image/${card.image_jp}` : "";
     const backImagePath = card.image_es ? `image/${card.image_es}` : "";
 
     cardFrontImage.src = frontImagePath;
     cardBackImage.src = backImagePath;
-
-    // 画像がない場合の代替テキスト
     cardFrontImage.alt = frontImagePath ? card.jp : "画像なし";
     cardBackImage.alt = backImagePath ? card.es : "画像なし";
 
     flashcard.classList.remove('is-flipped');
     progressIndicator.textContent = `${currentCardIndex + 1} / ${activeCards.length}`;
+    jumpInput.value = currentCardIndex + 1;
+    
+    prevButton.disabled = false;
     nextButton.disabled = false;
     markLearnedButton.disabled = false;
   }
@@ -97,10 +109,34 @@ document.addEventListener('DOMContentLoaded', () => {
     flashcard.classList.toggle('is-flipped');
   });
 
+  // 「戻る」ボタンの処理
+  prevButton.addEventListener('click', () => {
+    currentCardIndex--;
+    displayCard();
+  });
+  
   // 「次へ」ボタンの処理
   nextButton.addEventListener('click', () => {
     currentCardIndex++;
     displayCard();
+  });
+
+  // ジャンプボタンの処理
+  jumpButton.addEventListener('click', () => {
+    const page = parseInt(jumpInput.value);
+    if (page >= 1 && page <= activeCards.length) {
+      currentCardIndex = page - 1;
+      displayCard();
+    } else {
+      alert(`1から${activeCards.length}までの数字を入力してください。`);
+    }
+  });
+
+  // ジャンプフォームでEnterキーを押した時の処理
+  jumpInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      jumpButton.click();
+    }
   });
   
   // 「覚えた！」ボタンの処理
@@ -111,9 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('learnedCards', JSON.stringify(learnedCards));
     }
     activeCards.splice(currentCardIndex, 1);
-    if (currentCardIndex >= activeCards.length && activeCards.length > 0) {
-      currentCardIndex = 0;
-    }
+    jumpInput.max = activeCards.length; // ジャンプの上限を更新
     displayCard();
   });
 
@@ -127,18 +161,26 @@ document.addEventListener('DOMContentLoaded', () => {
       settingsContainer.style.display = 'block';
     }
   });
-// ▼▼▼ キーボード操作のコード ▼▼▼
+  
+  // キーボード操作のコード
   document.addEventListener('keydown', (event) => {
-    // ゲーム画面が表示されている時だけ操作を有効にする
     if (gameArea.style.display === 'block') {
+      // ジャンプフォームに入力中はキー操作を無効にする
+      if (document.activeElement === jumpInput) {
+        return;
+      }
+
       switch (event.key) {
+        case 'ArrowLeft':
+          prevButton.click();
+          break;
         case 'ArrowRight':
-          // 右矢印キーで「次へ」ボタンをクリック
           nextButton.click();
           break;
         case 'ArrowDown':
         case 'ArrowUp':
-          // 上下矢印キーでカードをクリックして裏返す
+        case ' ': // スペースキーでも裏返せるように追加
+          event.preventDefault(); // スペースキーでの画面スクロールを防止
           flashcard.click();
           break;
       }
