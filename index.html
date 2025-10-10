@@ -19,8 +19,8 @@
     </div>
     <div class="setting-group">
       <p><strong>② 内容を選択</strong></p>
-      <label><input type="radio" name="contentType" value="_yomi" checked> 読み物</label>
-      <label><input type="radio" name="contentType" value="_kaiwa"> 会話</label>
+      <label><input type="radio" name="contentType" value="yomi" checked> 読み物</label>
+      <label><input type="radio" name="contentType" value="kaiwa"> 会話</label>
     </div>
     <div class="setting-group">
       <p><strong>③ オプション</strong></p>
@@ -36,8 +36,14 @@
     <p id="progress-indicator"></p>
     <div class="flashcard" id="flashcard">
       <div class="card-inner">
-        <div class="card-front"></div>
-        <div class="card-back"></div>
+        <div class="card-front">
+          <img class="card-image" src="" alt="カード画像">
+          <div class="card-text"></div>
+        </div>
+        <div class="card-back">
+          <img class="card-image" src="" alt="カード画像">
+          <div class="card-text"></div>
+        </div>
       </div>
     </div>
     <div class="navigation-buttons">
