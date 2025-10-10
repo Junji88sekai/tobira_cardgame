@@ -1,91 +1,166 @@
 const cardData = [
+  // =============================================
+  // == 第1課のデータ (これは既存のデータです) ==
+  // =============================================
   {
     lesson: 1,
-    topic: 'kaiwa', // 「会話」の単語リスト
+    topic: 'kaiwa',
     words: [
-      { jp: 'mukashibanashi', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'senkou', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'iroiroto', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'senmon', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'chihou', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'inaka', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'kantouchihou', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'kansaichihou', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'hairu', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'naiyou', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'meibutsu', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'dentouteki', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'gyouji', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'toshi', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'tokubetsu', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'okonau', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'oshougatsu', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'tachi', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'ippan', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'ippanteki', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'e', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'taihen', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'hontou', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'shusshin', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'shizen', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'kibishii', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'kimochi', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'hajime', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'matsuri', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'sugoi', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'boku', es: '（ここにスペイン語訳を入力）' }
+      { jp: 'mukashibanashi', es: 'Cuento antiguo', image_jp: 'kaiwa/1/mukashibanashi_jp.png', image_es: 'kaiwa/1/mukashibanashi_es.png' },
+      { jp: 'senkou', es: 'Especialidad', image_jp: 'kaiwa/1/senkou_jp.png', image_es: 'kaiwa/1/senkou_es.png' },
+      // ...第1課の会話データをここに追加...
     ]
   },
   {
     lesson: 1,
-    topic: 'yomi', // 「読み物」の単語リスト
+    topic: 'yomi',
     words: [
-      { jp: 'chiri', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'minasan', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'ookina', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'shima', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'tairiku', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'toshi', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'hokkaido', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'honshu', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'shikoku', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'kyushu', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'zentai', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'bunnoichi', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'todofuken', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'shuto', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'senso', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'heiwa', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'tsutaeru', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'genbaku', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'kiko', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'hi', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'kion', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'sa', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'sakura', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'owari', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'hitobito', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'tanoshimu', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'meisho', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'tatoeba', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'mottomo', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'utsukushii', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'oshiro', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'mae', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'kabe', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'nokoru', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'tatemono', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'katachi', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'satsuei', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'kanko', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'mokuteki', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'rirakkusu', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'keshiki', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'tokuni', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'shi', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'kai', es: '（ここにスペイン語訳を入力）' },
-      { jp: 'kengaku', es: '（ここにスペイン語訳を入力）' }
+      { jp: 'chiri', es: 'Geografía', image_jp: 'yomi/1/chiri_jp.png', image_es: 'yomi/1/chiri_es.png' },
+      // ...第1課の読み物データをここに追加...
     ]
+  },
+
+  // ==========================================================
+  // == ▼▼▼ ここから第2課～第15課のテスト用データ ▼▼▼ ==
+  // ==========================================================
+  {
+    lesson: 2,
+    topic: 'kaiwa',
+    words: [ { jp: '第2課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 2,
+    topic: 'yomi',
+    words: [ { jp: '第2課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 3,
+    topic: 'kaiwa',
+    words: [ { jp: '第3課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 3,
+    topic: 'yomi',
+    words: [ { jp: '第3課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 4,
+    topic: 'kaiwa',
+    words: [ { jp: '第4課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 4,
+    topic: 'yomi',
+    words: [ { jp: '第4課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 5,
+    topic: 'kaiwa',
+    words: [ { jp: '第5課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 5,
+    topic: 'yomi',
+    words: [ { jp: '第5課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 6,
+    topic: 'kaiwa',
+    words: [ { jp: '第6課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 6,
+    topic: 'yomi',
+    words: [ { jp: '第6課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 7,
+    topic: 'kaiwa',
+    words: [ { jp: '第7課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 7,
+    topic: 'yomi',
+    words: [ { jp: '第7課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 8,
+    topic: 'kaiwa',
+    words: [ { jp: '第8課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 8,
+    topic: 'yomi',
+    words: [ { jp: '第8課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 9,
+    topic: 'kaiwa',
+    words: [ { jp: '第9課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 9,
+    topic: 'yomi',
+    words: [ { jp: '第9課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 10,
+    topic: 'kaiwa',
+    words: [ { jp: '第10課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 10,
+    topic: 'yomi',
+    words: [ { jp: '第10課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 11,
+    topic: 'kaiwa',
+    words: [ { jp: '第11課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 11,
+    topic: 'yomi',
+    words: [ { jp: '第11課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 12,
+    topic: 'kaiwa',
+    words: [ { jp: '第12課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 12,
+    topic: 'yomi',
+    words: [ { jp: '第12課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 13,
+    topic: 'kaiwa',
+    words: [ { jp: '第13課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 13,
+    topic: 'yomi',
+    words: [ { jp: '第13課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 14,
+    topic: 'kaiwa',
+    words: [ { jp: '第14課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 14,
+    topic: 'yomi',
+    words: [ { jp: '第14課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 15,
+    topic: 'kaiwa',
+    words: [ { jp: '第15課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
+  },
+  {
+    lesson: 15,
+    topic: 'yomi',
+    words: [ { jp: '第15課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ]
   }
-  // --- 今後、第2課、第3課のデータをここに追加していきます ---
 ];
