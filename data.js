@@ -1,29 +1,91 @@
 const cardData = [
   {
     lesson: 1,
-    topic: 'mukashibanashi_yomi', // 「読み物」データ
+    topic: 'kaiwa', // 「会話」の単語リスト
     words: [
-      { jp: 'むかしむかし', es: 'Érase una vez' },
-      { jp: 'おじいさん', es: 'Anciano' },
-      { jp: 'おばあさん', es: 'Anciana' }
+      { jp: 'mukashibanashi', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'senkou', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'iroiroto', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'senmon', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'chihou', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'inaka', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'kantouchihou', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'kansaichihou', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'hairu', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'naiyou', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'meibutsu', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'dentouteki', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'gyouji', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'toshi', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'tokubetsu', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'okonau', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'oshougatsu', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'tachi', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'ippan', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'ippanteki', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'e', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'taihen', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'hontou', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'shusshin', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'shizen', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'kibishii', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'kimochi', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'hajime', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'matsuri', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'sugoi', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'boku', es: '（ここにスペイン語訳を入力）' }
     ]
   },
   {
     lesson: 1,
-    topic: 'mukashibanashi_kaiwa', // 「会話」データ
+    topic: 'yomi', // 「読み物」の単語リスト
     words: [
-      { jp: 'こんにちは', es: 'Hola' },
-      { jp: 'ありがとう', es: 'Gracias' },
-      { jp: 'さようなら', es: 'Adiós' }
-    ]
-  },
-  {
-    lesson: 2,
-    topic: 'shopping_yomi',
-    words: [
-      { jp: 'お店', es: 'Tienda' },
-      { jp: '買い物', es: 'Compras' }
+      { jp: 'chiri', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'minasan', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'ookina', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'shima', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'tairiku', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'toshi', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'hokkaido', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'honshu', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'shikoku', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'kyushu', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'zentai', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'bunnoichi', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'todofuken', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'shuto', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'senso', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'heiwa', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'tsutaeru', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'genbaku', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'kiko', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'hi', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'kion', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'sa', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'sakura', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'owari', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'hitobito', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'tanoshimu', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'meisho', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'tatoeba', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'mottomo', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'utsukushii', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'oshiro', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'mae', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'kabe', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'nokoru', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'tatemono', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'katachi', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'satsuei', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'kanko', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'mokuteki', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'rirakkusu', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'keshiki', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'tokuni', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'shi', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'kai', es: '（ここにスペイン語訳を入力）' },
+      { jp: 'kengaku', es: '（ここにスペイン語訳を入力）' }
     ]
   }
-  // --- 以下、第15課までのデータを同様の形式で追加していく ---
+  // --- 今後、第2課、第3課のデータをここに追加していきます ---
 ];
