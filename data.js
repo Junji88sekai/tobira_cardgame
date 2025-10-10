@@ -117,4 +117,9 @@ const cardData = [
   { lesson: 12, topic: 'kaiwa', words: [ { jp: '第12課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
   { lesson: 12, topic: 'yomi', words: [ { jp: '第12課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
   { lesson: 13, topic: 'kaiwa', words: [ { jp: '第13課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
-  { lesson: 13, topic: 'y
+  { lesson: 13, topic: 'yomi', words: [ { jp: '第13課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
+  { lesson: 14, topic: 'kaiwa', words: [ { jp: '第14課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
+  { lesson: 14, topic: 'yomi', words: [ { jp: '第14課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
+  { lesson: 15, topic: 'kaiwa', words: [ { jp: '第15課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
+  { lesson: 15, topic: 'yomi', words: [ { jp: '第15課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ] }
+];
