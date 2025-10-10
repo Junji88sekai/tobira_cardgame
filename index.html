@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>単語練習フラッシュカード</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>単語練習フラッシュカード</h1>
+
+  <div class="settings-container">
+    <h2>設定</h2>
+    <div class="setting-group">
+      <p><strong>① 課を選択 (複数選択可)</strong></p>
+      <div id="lesson-checkboxes">
+        </div>
+    </div>
+    <div class="setting-group">
+      <p><strong>② 内容を選択</strong></p>
+      <label><input type="radio" name="contentType" value="_yomi" checked> 読み物</label>
+      <label><input type="radio" name="contentType" value="_kaiwa"> 会話</label>
+    </div>
+    <div class="setting-group">
+      <p><strong>③ オプション</strong></p>
+      <label><input type="checkbox" id="random-mode"> ランダム表示</label>
+      <br>
+      <label><input type="radio" name="card-side" value="jp" checked> 日本語から</label>
+      <label><input type="radio" name="card-side" value="es"> スペイン語から</label>
+    </div>
+    <button id="start-button">ゲーム開始</button>
+  </div>
+
+  <div class="game-container" id="game-area" style="display: none;">
+    <p id="progress-indicator"></p>
+    <div class="flashcard" id="flashcard">
+      <div class="card-inner">
+        <div class="card-front"></div>
+        <div class="card-back"></div>
+      </div>
+    </div>
+    <div class="navigation-buttons">
+      <button id="mark-learned-button">覚えた！</button>
+      <button id="next-button">次へ</button>
+    </div>
+     <div class="reset-area">
+      <button id="reset-learned-button">「覚えた」をリセット</button>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
