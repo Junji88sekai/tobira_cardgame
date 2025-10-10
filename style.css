@@ -11,6 +11,7 @@ h1 {
   color: #2c3e50;
 }
 
+/* ▼▼▼ game-container に display: flex; などを追加 ▼▼▼ */
 .settings-container, .game-container {
   background-color: white;
   padding: 20px 25px;
@@ -19,12 +20,17 @@ h1 {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   width: 90%;
   max-width: 600px;
+  /* ここから追加 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .setting-group {
   margin-bottom: 15px;
   border-top: 1px solid #eee;
   padding-top: 15px;
+  width: 100%; 
 }
 
 #lesson-checkboxes label {
@@ -49,12 +55,14 @@ button:hover {
   background-color: #0056b3;
 }
 
+/* ▼▼▼ flashcard の高さを大きく設定 ▼▼▼ */
 .flashcard {
   width: 100%;
-  height: 250px;
+  height: 450px; /* ← カードの高さを大きくする (例: 450px) */
   perspective: 1000px;
   cursor: pointer;
-  margin: 20px 0;
+  margin-bottom: 20px; /* カードとボタンの間の余白を確保 */
+  margin-top: 0; /* 上の余白をリセット */
 }
 
 .card-inner {
@@ -87,14 +95,16 @@ button:hover {
   transform: rotateY(180deg);
 }
 
+/* ▼▼▼ card-image のサイズを修正 ▼▼▼ */
 .card-image {
-  max-height: 200%;
-  max-width: 200%;
+  max-height: 95%; /* カードの高さの95%までに制限 */
+  max-width: 95%;  /* カードの幅の95%までに制限 */
   display: block;
 }
 
+/* ▼▼▼ ボタンの margin-top をリセット ▼▼▼ */
 .navigation-buttons, .reset-area {
-  margin-top: 60px;
+  margin-top: 0; /* flexレイアウトで管理するため0に戻す */
   text-align: center;
 }
 
@@ -105,6 +115,3 @@ button:hover {
 #reset-learned-button:hover {
   background-color: #c82333;
 }
-
-
-
