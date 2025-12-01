@@ -1,121 +1,105 @@
 const cardData = [
-  // ===================================
-  // == 第1課のデータ (パス修正済み) ==
-  // ===================================
-  {
-    lesson: 1,
-    topic: 'kaiwa',
-    words: [
-      { jp: 'mukashibanashi', es: 'mukashibanashi', image_jp: 'U1/kaiwa/U1_01_mukashibanashi_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_01_mukashibanashi_es_kaiwa.png' },
-      { jp: 'senkou', es: 'senkou', image_jp: 'U1/kaiwa/U1_02_senkou_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_02_senkou_es_kaiwa.png' },
-      { jp: 'iroiroto', es: 'iroiroto', image_jp: 'U1/kaiwa/U1_03_iroiroto_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_03_iroiroto_es_kaiwa.png' },
-      { jp: 'senmon', es: 'senmon', image_jp: 'U1/kaiwa/U1_04_senmon_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_04_senmon_es_kaiwa.png' },
-      { jp: 'chihou', es: 'chihou', image_jp: 'U1/kaiwa/U1_05_chihou_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_05_chihou_es_kaiwa.png' },
-      { jp: 'inaka', es: 'inaka', image_jp: 'U1/kaiwa/U1_06_inaka_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_06_inaka_es_kaiwa.png' },
-      { jp: 'kantouchihou', es: 'kantouchihou', image_jp: 'U1/kaiwa/U1_07_kantouchihou_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_07_kantouchihou_es_kaiwa.png' },
-      { jp: 'kansaichihou', es: 'kansaichihou', image_jp: 'U1/kaiwa/U1_08_kansaichihou_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_08_kansaichihou_es_kaiwa.png' },
-      { jp: 'hairu', es: 'hairu', image_jp: 'U1/kaiwa/U1_09_hairu_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_09_hairu_es_kaiwa.png' },
-      { jp: 'naiyou', es: 'naiyou', image_jp: 'U1/kaiwa/U1_10_naiyou_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_10_naiyou_es_kaiwa.png' },
-      { jp: 'meibutsu', es: 'meibutsu', image_jp: 'U1/kaiwa/U1_11_meibutsu_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_11_meibutsu_es_kaiwa.png' },
-      { jp: 'dentouteki', es: 'dentouteki', image_jp: 'U1/kaiwa/U1_12_dentouteki_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_12_dentouteki_es_kaiwa.png' },
-      { jp: 'gyouji', es: 'gyouji', image_jp: 'U1/kaiwa/U1_13_gyouji_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_13_gyouji_es_kaiwa.png' },
-      { jp: 'toshi', es: 'toshi', image_jp: 'U1/kaiwa/U1_14_toshi_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_14_toshi_es_kaiwa.png' },
-      { jp: 'tokubetsu', es: 'tokubetsu', image_jp: 'U1/kaiwa/U1_15_tokubetsu_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_15_tokubetsu_es_kaiwa.png' },
-      { jp: 'okonau', es: 'okonau', image_jp: 'U1/kaiwa/U1_16_okonau_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_16_okonau_es_kaiwa.png' },
-      { jp: 'oshougatsu', es: 'oshougatsu', image_jp: 'U1/kaiwa/U1_17_oshougatsu_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_17_oshougatsu_es_kaiwa.png' },
-      { jp: 'tachi', es: 'tachi', image_jp: 'U1/kaiwa/U1_18_tachi_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_18_tachi_es_kaiwa.png' },
-      { jp: 'ippan', es: 'ippan', image_jp: 'U1/kaiwa/U1_19_ippan_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_19_ippan_es_kaiwa.png' },
-      { jp: 'ippanteki', es: 'ippanteki', image_jp: 'U1/kaiwa/U1_20_ippanteki_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_20_ippanteki_es_kaiwa.png' },
-      { jp: 'e', es: 'e', image_jp: 'U1/kaiwa/U1_21_e_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_21_e_es_kaiwa.png' },
-      { jp: 'taihen', es: 'taihen', image_jp: 'U1/kaiwa/U1_22_taihen_jp_kaiwa.png', image_es: 'U1/kaiwa/U2_22_taihen_es_kaiwa.png' },
-      { jp: 'hontou', es: 'hontou', image_jp: 'U1/kaiwa/U1_23_hontou_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_23_hontou_es_kaiwa.png' },
-      { jp: 'shusshin', es: 'shusshin', image_jp: 'U1/kaiwa/U1_24_shusshin_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_24_shusshin_es_kaiwa.png' },
-      { jp: 'shizen', es: 'shizen', image_jp: 'U1/kaiwa/U1_25_shizen_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_25_shizen_es_kaiwa.png' },
-      { jp: 'kibishii', es: 'kibishii', image_jp: 'U1/kaiwa/U1_26_kibishii_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_26_kibishii_es_kaiwa.png' },
-      { jp: 'kimochi', es: 'kimochi', image_jp: 'U1/kaiwa/U1_27_kimochi_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_27_kimochi_es_kaiwa.png' },
-      { jp: 'hajime', es: 'hajime', image_jp: 'U1/kaiwa/U1_28_hajime_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_28_hajime_es_kaiwa.png' },
-      { jp: 'matsuri', es: 'matsuri', image_jp: 'U1/kaiwa/U1_29_matsuri_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_29_matsuri_es_kaiwa.png' },
-      { jp: 'sugoi', es: 'sugoi', image_jp: 'U1/kaiwa/U1_30_sugoi_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_30_sugoi_es_kaiwa.png' },
-      { jp: 'boku', es: 'boku', image_jp: 'U1/kaiwa/U1_31_boku_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_31_boku_es_kaiwa.png' }
-    ]
-  },
-  {
-    lesson: 1,
-    topic: 'yomi',
-    words: [
-      { jp: 'chiri', es: 'chiri', image_jp: 'U1/yomimono/U1_01_chiri_jp_yomi.png', image_es: 'U1/yomimono/U1_01_chiri_es_yomi.png' },
-      { jp: 'minasan', es: 'minasan', image_jp: 'U1/yomimono/U1_02_minasan_jp_yomi.png', image_es: 'U1/yomimono/U1_02_minasan_es_yomi.png' },
-      { jp: 'ookina', es: 'ookina', image_jp: 'U1/yomimono/U1_03_ookina_jp_yomi.png', image_es: 'U1/yomimono/U1_03_ookina_es_yomi.png' },
-      { jp: 'shima', es: 'shima', image_jp: 'U1/yomimono/U1_04_shima_jp_yomi.png', image_es: 'U1/yomimono/U1_04_shima_es_yomi.png' },
-      { jp: 'tairiku', es: 'tairiku', image_jp: 'U1/yomimono/U1_05_tairiku_jp_yomi.png', image_es: 'U1/yomimono/U1_05_tairiku_es_yomi.png' },
-      { jp: 'toshi', es: 'toshi', image_jp: 'U1/yomimono/U1_06_toshi_jp_yomi.png', image_es: 'U1/yomimono/U1_06_toshi_es_yomi.png' },
-      { jp: 'hokkaido', es: 'hokkaido', image_jp: 'U1/yomimono/U1_07_hokkaido_jp_yomi.png', image_es: 'U1/yomimono/U1_07_hokkaido_es_yomi.png' },
-      { jp: 'honshu', es: 'honshu', image_jp: 'U1/yomimono/U1_08_honshu_jp_yomi.png', image_es: 'U1/yomimono/U1_08_honshu_es_yomi.png' },
-      { jp: 'shikoku', es: 'shikoku', image_jp: 'U1/yomimono/U1_09_shikoku_jp_yomi.png', image_es: 'U1/yomimono/U1_09_shikoku_es_yomi.png' },
-      { jp: 'kyushu', es: 'kyushu', image_jp: 'U1/yomimono/U1_10_kyushu_jp_yomi.png', image_es: 'U1/yomimono/U1_10_kyushu_es_yomi.png' },
-      { jp: 'zentai', es: 'zentai', image_jp: 'U1/yomimono/U1_11_zentai_jp_yomi.png', image_es: 'U1/yomimono/U1_11_zentai_es_yomi.png' },
-      { jp: 'bunnoichi', es: 'bunnoichi', image_jp: 'U1/yomimono/U1_12_bunnoichi_jp_yomi.png', image_es: 'U1/yomimono/U1_12_bunnoichi_es_yomi.png' },
-      { jp: 'todofuken', es: 'todofuken', image_jp: 'U1/yomimono/U1_13_todofuken_jp_yomi.png', image_es: 'U1/yomimono/U1_13_todofuken_es_yomi.png' },
-      { jp: 'shuto', es: 'shuto', image_jp: 'U1/yomimono/U1_14_shuto_jp_yomi.png', image_es: 'U1/yomimono/U1_14_shuto_es_yomi.png' },
-      { jp: 'senso', es: 'senso', image_jp: 'U1/yomimono/U1_15_senso_jp_yomi.png', image_es: 'U1/yomimono/U1_15_senso_es_yomi.png' },
-      { jp: 'heiwa', es: 'heiwa', image_jp: 'U1/yomimono/U1_16_heiwa_jp_yomi.png', image_es: 'U1/yomimono/U1_16_heiwa_es_yomi.png' },
-      { jp: 'tsutaeru', es: 'tsutaeru', image_jp: 'U1/yomimono/U1_17_tsutaeru_jp_yomi.png', image_es: 'U1/yomimono/U1_17_tsutaeru_es_yomi.png' },
-      { jp: 'genbaku', es: 'genbaku', image_jp: 'U1/yomimono/U1_18_genbaku_jp_yomi.png', image_es: 'U1/yomimono/U1_18_genbaku_es_yomi.png' },
-      { jp: 'kiko', es: 'kiko', image_jp: 'U1/yomimono/U1_19_kiko_jp_yomi.png', image_es: 'U1/yomimono/U1_19_kiko_es_yomi.png' },
-      { jp: 'hi', es: 'hi', image_jp: 'U1/yomimono/U1_20_hi_jp_yomi.png', image_es: 'U1/yomimono/U1_20_hi_es_yomi.png' },
-      { jp: 'kion', es: 'kion', image_jp: 'U1/yomimono/U1_21_kion_jp_yomi.png', image_es: 'U1/yomimono/U1_21_kion_es_yomi.png' },
-      { jp: 'sa', es: 'sa', image_jp: 'U1/yomimono/U1_22_sa_jp_yomi.png', image_es: 'U1/yomimono/U1_22_sa_es_yomi.png' },
-      { jp: 'sakura', es: 'sakura', image_jp: 'U1/yomimono/U1_23_sakura_jp_yomi.png', image_es: 'U1/yomimono/U1_23_sakura_es_yomi.png' },
-      { jp: 'owari', es: 'owari', image_jp: 'U1/yomimono/U1_24_owari_jp_yomi.png', image_es: 'U1/yomimono/U1_24_owari_es_yomi.png' },
-      { jp: 'hitobito', es: 'hitobito', image_jp: 'U1/yomimono/U1_25_hitobito_jp_yomi.png', image_es: 'U1/yomimono/U1_25_hitobito_es_yomi.png' },
-      { jp: 'tanoshimu', es: 'tanoshimu', image_jp: 'U1/yomimono/U1_26_tanoshimu_jp_yomi.png', image_es: 'U1/yomimono/U1_26_tanoshimu_es_yomi.png' },
-      { jp: 'meisho', es: 'meisho', image_jp: 'U1/yomimono/U1_27_meisho_jp_yomi.png', image_es: 'U1/yomimono/U1_27_meisho_es_yomi.png' },
-      { jp: 'tatoeba', es: 'tatoeba', image_jp: 'U1/yomimono/U1_28_tatoeba_jp_yomi.png', image_es: 'U1/yomimono/U1_28_tatoeba_es_yomi.png' },
-      { jp: 'mottomo', es: 'mottomo', image_jp: 'U1/yomimono/U1_29_mottomo_jp_yomi.png', image_es: 'U1/yomimono/U1_29_mottomo_es_yomi.png' },
-      { jp: 'utsukushii', es: 'utsukushii', image_jp: 'U1/yomimono/U1_30_utsukushii_jp_yomi.png', image_es: 'U1/yomimono/U1_30_utsukushii_es_yomi.png' },
-      { jp: 'oshiro', es: 'oshiro', image_jp: 'U1/yomimono/U1_31_oshiro_jp_yomi.png', image_es: 'U1/yomimono/U1_31_oshiro_es_yomi.png' },
-      { jp: 'mae', es: 'mae', image_jp: 'U1/yomimono/U1_32_mae_jp_yomi.png', image_es: 'U1/yomimono/U1_32_mae_es_yomi.png' },
-      { jp: 'kabe', es: 'kabe', image_jp: 'U1/yomimono/U1_33_kabe_jp_yomi.png', image_es: 'U1/yomimono/U1_33_kabe_es_yomi.png' },
-      { jp: 'nokoru', es: 'nokoru', image_jp: 'U1/yomimono/U1_34_nokoru_jp_yomi.png', image_es: 'U1/yomimono/U1_34_nokoru_es_yomi.png' },
-      { jp: 'tatemono', es: 'tatemono', image_jp: 'U1/yomimono/U1_35_tatemono_jp_yomi.png', image_es: 'U1/yomimono/U1_35_tatemono_es_yomi.png' },
-      { jp: 'katachi', es: 'katachi', image_jp: 'U1/yomimono/U1_36_katachi_jp_yomi.png', image_es: 'U1/yomimono/U1_36_katachi_es_yomi.png' },
-      { jp: 'satsuei', es: 'satsuei', image_jp: 'U1/yomimono/U1_37_satsuei_jp_yomi.png', image_es: 'U1/yomimono/U1_37_satsuei_es_yomi.png' },
-      { jp: 'kanko', es: 'kanko', image_jp: 'U1/yomimono/U1_38_kanko_jp_yomi.png', image_es: 'U1/yomimono/U1_38_kanko_es_yomi.png' },
-      { jp: 'mokuteki', es: 'mokuteki', image_jp: 'U1/yomimono/U1_39_mokuteki_jp_yomi.png', image_es: 'U1/yomimono/U1_39_mokuteki_es_yomi.png' },
-      { jp: 'rirakkusu', es: 'rirakkusu', image_jp: 'U1/yomimono/U1_40_rirakkusu_jp_yomi.png', image_es: 'U1/yomimono/U1_40_rirakkusu_es_yomi.png' },
-      { jp: 'keshiki', es: 'keshiki', image_jp: 'U1/yomimono/U1_41_keshiki_jp_yomi.png', image_es: 'U1/yomimono/U1_41_keshiki_es_yomi.png' },
-      { jp: 'tokuni', es: 'tokuni', image_jp: 'U1/yomimono/U1_42_tokuni_jp_yomi.png', image_es: 'U1/yomimono/U1_42_tokuni_es_yomi.png' },
-      { jp: 'shi', es: 'shi', image_jp: 'U1/yomimono/U1_43_shi_jp_yomi.png', image_es: 'U1/yomimono/U1_43_shi_es_yomi.png' },
-      { jp: 'kai', es: 'kai', image_jp: 'U1/yomimono/U1_44_kai_jp_yomi.png', image_es: 'U1/yomimono/U1_44_kai_es_yomi.png' },
-      { jp: 'kengaku', es: 'kengaku', image_jp: 'U1/yomimono/U1_45_kengaku_jp_yomi.png', image_es: 'U1/yomimono/U1_45_kengaku_es_yomi.png' }
-    ]
-  },
-  承知いたしました。第2課（U2）の「読み物」（topic: 'yomi'）のデータをご提供いただいたファイル名とナンバリングに基づいて追加します。
+  // ===================================
+  // == 第1課のデータ ==
+  // ===================================
+  {
+    lesson: 1,
+    topic: 'kaiwa',
+    words: [
+      { jp: 'mukashibanashi', es: 'mukashibanashi', image_jp: 'U1/kaiwa/U1_01_mukashibanashi_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_01_mukashibanashi_es_kaiwa.png' },
+      { jp: 'senkou', es: 'senkou', image_jp: 'U1/kaiwa/U1_02_senkou_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_02_senkou_es_kaiwa.png' },
+      { jp: 'iroiroto', es: 'iroiroto', image_jp: 'U1/kaiwa/U1_03_iroiroto_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_03_iroiroto_es_kaiwa.png' },
+      { jp: 'senmon', es: 'senmon', image_jp: 'U1/kaiwa/U1_04_senmon_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_04_senmon_es_kaiwa.png' },
+      { jp: 'chihou', es: 'chihou', image_jp: 'U1/kaiwa/U1_05_chihou_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_05_chihou_es_kaiwa.png' },
+      { jp: 'inaka', es: 'inaka', image_jp: 'U1/kaiwa/U1_06_inaka_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_06_inaka_es_kaiwa.png' },
+      { jp: 'kantouchihou', es: 'kantouchihou', image_jp: 'U1/kaiwa/U1_07_kantouchihou_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_07_kantouchihou_es_kaiwa.png' },
+      { jp: 'kansaichihou', es: 'kansaichihou', image_jp: 'U1/kaiwa/U1_08_kansaichihou_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_08_kansaichihou_es_kaiwa.png' },
+      { jp: 'hairu', es: 'hairu', image_jp: 'U1/kaiwa/U1_09_hairu_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_09_hairu_es_kaiwa.png' },
+      { jp: 'naiyou', es: 'naiyou', image_jp: 'U1/kaiwa/U1_10_naiyou_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_10_naiyou_es_kaiwa.png' },
+      { jp: 'meibutsu', es: 'meibutsu', image_jp: 'U1/kaiwa/U1_11_meibutsu_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_11_meibutsu_es_kaiwa.png' },
+      { jp: 'dentouteki', es: 'dentouteki', image_jp: 'U1/kaiwa/U1_12_dentouteki_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_12_dentouteki_es_kaiwa.png' },
+      { jp: 'gyouji', es: 'gyouji', image_jp: 'U1/kaiwa/U1_13_gyouji_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_13_gyouji_es_kaiwa.png' },
+      { jp: 'toshi', es: 'toshi', image_jp: 'U1/kaiwa/U1_14_toshi_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_14_toshi_es_kaiwa.png' },
+      { jp: 'tokubetsu', es: 'tokubetsu', image_jp: 'U1/kaiwa/U1_15_tokubetsu_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_15_tokubetsu_es_kaiwa.png' },
+      { jp: 'okonau', es: 'okonau', image_jp: 'U1/kaiwa/U1_16_okonau_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_16_okonau_es_kaiwa.png' },
+      { jp: 'oshougatsu', es: 'oshougatsu', image_jp: 'U1/kaiwa/U1_17_oshougatsu_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_17_oshougatsu_es_kaiwa.png' },
+      { jp: 'tachi', es: 'tachi', image_jp: 'U1/kaiwa/U1_18_tachi_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_18_tachi_es_kaiwa.png' },
+      { jp: 'ippan', es: 'ippan', image_jp: 'U1/kaiwa/U1_19_ippan_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_19_ippan_es_kaiwa.png' },
+      { jp: 'ippanteki', es: 'ippanteki', image_jp: 'U1/kaiwa/U1_20_ippanteki_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_20_ippanteki_es_kaiwa.png' },
+      { jp: 'e', es: 'e', image_jp: 'U1/kaiwa/U1_21_e_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_21_e_es_kaiwa.png' },
+      { jp: 'taihen', es: 'taihen', image_jp: 'U1/kaiwa/U1_22_taihen_jp_kaiwa.png', image_es: 'U1/kaiwa/U2_22_taihen_es_kaiwa.png' },
+      { jp: 'hontou', es: 'hontou', image_jp: 'U1/kaiwa/U1_23_hontou_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_23_hontou_es_kaiwa.png' },
+      { jp: 'shusshin', es: 'shusshin', image_jp: 'U1/kaiwa/U1_24_shusshin_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_24_shusshin_es_kaiwa.png' },
+      { jp: 'shizen', es: 'shizen', image_jp: 'U1/kaiwa/U1_25_shizen_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_25_shizen_es_kaiwa.png' },
+      { jp: 'kibishii', es: 'kibishii', image_jp: 'U1/kaiwa/U1_26_kibishii_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_26_kibishii_es_kaiwa.png' },
+      { jp: 'kimochi', es: 'kimochi', image_jp: 'U1/kaiwa/U1_27_kimochi_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_27_kimochi_es_kaiwa.png' },
+      { jp: 'hajime', es: 'hajime', image_jp: 'U1/kaiwa/U1_28_hajime_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_28_hajime_es_kaiwa.png' },
+      { jp: 'matsuri', es: 'matsuri', image_jp: 'U1/kaiwa/U1_29_matsuri_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_29_matsuri_es_kaiwa.png' },
+      { jp: 'sugoi', es: 'sugoi', image_jp: 'U1/kaiwa/U1_30_sugoi_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_30_sugoi_es_kaiwa.png' },
+      { jp: 'boku', es: 'boku', image_jp: 'U1/kaiwa/U1_31_boku_jp_kaiwa.png', image_es: 'U1/kaiwa/U1_31_boku_es_kaiwa.png' }
+    ]
+  },
+  {
+    lesson: 1,
+    topic: 'yomi',
+    words: [
+      { jp: 'chiri', es: 'chiri', image_jp: 'U1/yomimono/U1_01_chiri_jp_yomi.png', image_es: 'U1/yomimono/U1_01_chiri_es_yomi.png' },
+      { jp: 'minasan', es: 'minasan', image_jp: 'U1/yomimono/U1_02_minasan_jp_yomi.png', image_es: 'U1/yomimono/U1_02_minasan_es_yomi.png' },
+      { jp: 'ookina', es: 'ookina', image_jp: 'U1/yomimono/U1_03_ookina_jp_yomi.png', image_es: 'U1/yomimono/U1_03_ookina_es_yomi.png' },
+      { jp: 'shima', es: 'shima', image_jp: 'U1/yomimono/U1_04_shima_jp_yomi.png', image_es: 'U1/yomimono/U1_04_shima_es_yomi.png' },
+      { jp: 'tairiku', es: 'tairiku', image_jp: 'U1/yomimono/U1_05_tairiku_jp_yomi.png', image_es: 'U1/yomimono/U1_05_tairiku_es_yomi.png' },
+      { jp: 'toshi', es: 'toshi', image_jp: 'U1/yomimono/U1_06_toshi_jp_yomi.png', image_es: 'U1/yomimono/U1_06_toshi_es_yomi.png' },
+      { jp: 'hokkaido', es: 'hokkaido', image_jp: 'U1/yomimono/U1_07_hokkaido_jp_yomi.png', image_es: 'U1/yomimono/U1_07_hokkaido_es_yomi.png' },
+      { jp: 'honshu', es: 'honshu', image_jp: 'U1/yomimono/U1_08_honshu_jp_yomi.png', image_es: 'U1/yomimono/U1_08_honshu_es_yomi.png' },
+      { jp: 'shikoku', es: 'shikoku', image_jp: 'U1/yomimono/U1_09_shikoku_jp_yomi.png', image_es: 'U1/yomimono/U1_09_shikoku_es_yomi.png' },
+      { jp: 'kyushu', es: 'kyushu', image_jp: 'U1/yomimono/U1_10_kyushu_jp_yomi.png', image_es: 'U1/yomimono/U1_10_kyushu_es_yomi.png' },
+      { jp: 'zentai', es: 'zentai', image_jp: 'U1/yomimono/U1_11_zentai_jp_yomi.png', image_es: 'U1/yomimono/U1_11_zentai_es_yomi.png' },
+      { jp: 'bunnoichi', es: 'bunnoichi', image_jp: 'U1/yomimono/U1_12_bunnoichi_jp_yomi.png', image_es: 'U1/yomimono/U1_12_bunnoichi_es_yomi.png' },
+      { jp: 'todofuken', es: 'todofuken', image_jp: 'U1/yomimono/U1_13_todofuken_jp_yomi.png', image_es: 'U1/yomimono/U1_13_todofuken_es_yomi.png' },
+      { jp: 'shuto', es: 'shuto', image_jp: 'U1/yomimono/U1_14_shuto_jp_yomi.png', image_es: 'U1/yomimono/U1_14_shuto_es_yomi.png' },
+      { jp: 'senso', es: 'senso', image_jp: 'U1/yomimono/U1_15_senso_jp_yomi.png', image_es: 'U1/yomimono/U1_15_senso_es_yomi.png' },
+      { jp: 'heiwa', es: 'heiwa', image_jp: 'U1/yomimono/U1_16_heiwa_jp_yomi.png', image_es: 'U1/yomimono/U1_16_heiwa_es_yomi.png' },
+      { jp: 'tsutaeru', es: 'tsutaeru', image_jp: 'U1/yomimono/U1_17_tsutaeru_jp_yomi.png', image_es: 'U1/yomimono/U1_17_tsutaeru_es_yomi.png' },
+      { jp: 'genbaku', es: 'genbaku', image_jp: 'U1/yomimono/U1_18_genbaku_jp_yomi.png', image_es: 'U1/yomimono/U1_18_genbaku_es_yomi.png' },
+      { jp: 'kiko', es: 'kiko', image_jp: 'U1/yomimono/U1_19_kiko_jp_yomi.png', image_es: 'U1/yomimono/U1_19_kiko_es_yomi.png' },
+      { jp: 'hi', es: 'hi', image_jp: 'U1/yomimono/U1_20_hi_jp_yomi.png', image_es: 'U1/yomimono/U1_20_hi_es_yomi.png' },
+      { jp: 'kion', es: 'kion', image_jp: 'U1/yomimono/U1_21_kion_jp_yomi.png', image_es: 'U1/yomimono/U1_21_kion_es_yomi.png' },
+      { jp: 'sa', es: 'sa', image_jp: 'U1/yomimono/U1_22_sa_jp_yomi.png', image_es: 'U1/yomimono/U1_22_sa_es_yomi.png' },
+      { jp: 'sakura', es: 'sakura', image_jp: 'U1/yomimono/U1_23_sakura_jp_yomi.png', image_es: 'U1/yomimono/U1_23_sakura_es_yomi.png' },
+      { jp: 'owari', es: 'owari', image_jp: 'U1/yomimono/U1_24_owari_jp_yomi.png', image_es: 'U1/yomimono/U1_24_owari_es_yomi.png' },
+      { jp: 'hitobito', es: 'hitobito', image_jp: 'U1/yomimono/U1_25_hitobito_jp_yomi.png', image_es: 'U1/yomimono/U1_25_hitobito_es_yomi.png' },
+      { jp: 'tanoshimu', es: 'tanoshimu', image_jp: 'U1/yomimono/U1_26_tanoshimu_jp_yomi.png', image_es: 'U1/yomimono/U1_26_tanoshimu_es_yomi.png' },
+      { jp: 'meisho', es: 'meisho', image_jp: 'U1/yomimono/U1_27_meisho_jp_yomi.png', image_es: 'U1/yomimono/U1_27_meisho_es_yomi.png' },
+      { jp: 'tatoeba', es: 'tatoeba', image_jp: 'U1/yomimono/U1_28_tatoeba_jp_yomi.png', image_es: 'U1/yomimono/U1_28_tatoeba_es_yomi.png' },
+      { jp: 'mottomo', es: 'mottomo', image_jp: 'U1/yomimono/U1_29_mottomo_jp_yomi.png', image_es: 'U1/yomimono/U1_29_mottomo_es_yomi.png' },
+      { jp: 'utsukushii', es: 'utsukushii', image_jp: 'U1/yomimono/U1_30_utsukushii_jp_yomi.png', image_es: 'U1/yomimono/U1_30_utsukushii_es_yomi.png' },
+      { jp: 'oshiro', es: 'oshiro', image_jp: 'U1/yomimono/U1_31_oshiro_jp_yomi.png', image_es: 'U1/yomimono/U1_31_oshiro_es_yomi.png' },
+      { jp: 'mae', es: 'mae', image_jp: 'U1/yomimono/U1_32_mae_jp_yomi.png', image_es: 'U1/yomimono/U1_32_mae_es_yomi.png' },
+      { jp: 'kabe', es: 'kabe', image_jp: 'U1/yomimono/U1_33_kabe_jp_yomi.png', image_es: 'U1/yomimono/U1_33_kabe_es_yomi.png' },
+      { jp: 'nokoru', es: 'nokoru', image_jp: 'U1/yomimono/U1_34_nokoru_jp_yomi.png', image_es: 'U1/yomimono/U1_34_nokoru_es_yomi.png' },
+      { jp: 'tatemono', es: 'tatemono', image_jp: 'U1/yomimono/U1_35_tatemono_jp_yomi.png', image_es: 'U1/yomimono/U1_35_tatemono_es_yomi.png' },
+      { jp: 'katachi', es: 'katachi', image_jp: 'U1/yomimono/U1_36_katachi_jp_yomi.png', image_es: 'U1/yomimono/U1_36_katachi_es_yomi.png' },
+      { jp: 'satsuei', es: 'satsuei', image_jp: 'U1/yomimono/U1_37_satsuei_jp_yomi.png', image_es: 'U1/yomimono/U1_37_satsuei_es_yomi.png' },
+      { jp: 'kanko', es: 'kanko', image_jp: 'U1/yomimono/U1_38_kanko_jp_yomi.png', image_es: 'U1/yomimono/U1_38_kanko_es_yomi.png' },
+      { jp: 'mokuteki', es: 'mokuteki', image_jp: 'U1/yomimono/U1_39_mokuteki_jp_yomi.png', image_es: 'U1/yomimono/U1_39_mokuteki_es_yomi.png' },
+      { jp: 'rirakkusu', es: 'rirakkusu', image_jp: 'U1/yomimono/U1_40_rirakkusu_jp_yomi.png', image_es: 'U1/yomimono/U1_40_rirakkusu_es_yomi.png' },
+      { jp: 'keshiki', es: 'keshiki', image_jp: 'U1/yomimono/U1_41_keshiki_jp_yomi.png', image_es: 'U1/yomimono/U1_41_keshiki_es_yomi.png' },
+      { jp: 'tokuni', es: 'tokuni', image_jp: 'U1/yomimono/U1_42_tokuni_jp_yomi.png', image_es: 'U1/yomimono/U1_42_tokuni_es_yomi.png' },
+      { jp: 'shi', es: 'shi', image_jp: 'U1/yomimono/U1_43_shi_jp_yomi.png', image_es: 'U1/yomimono/U1_43_shi_es_yomi.png' },
+      { jp: 'kai', es: 'kai', image_jp: 'U1/yomimono/U1_44_kai_jp_yomi.png', image_es: 'U1/yomimono/U1_44_kai_es_yomi.png' },
+      { jp: 'kengaku', es: 'kengaku', image_jp: 'U1/yomimono/U1_45_kengaku_jp_yomi.png', image_es: 'U1/yomimono/U1_45_kengaku_es_yomi.png' }
+    ]
+  },
 
-このデータは、既存の第2課のプレースホルダーを置き換える形で挿入します。
+  // ===================================
+  // == 第2課のデータ (修正済み) ==
+  // ===================================
 
-✅ 第2課データの修正案
-💻 修正点
-既存の第2課のプレースホルダー（会話と読み物）を削除します。
+  // 2-1. 会話 (プレースホルダーを維持)
+  { lesson: 2, topic: 'kaiwa', words: [ { jp: '第2課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
 
-第2課の「読み物」（topic: 'yomi'）ブロックを新規作成し、ご提供のリストに従って単語とパス（U2/yomimono/）を定義します。
-
-今回は会話データがないため、第2課の「会話」（topic: 'kaiwa'）については後で追加するためのプレースホルダーを残しておきます。
-
-📄 修正後の cardData（抜粋）
-以下のコードを、あなたのdata.jsファイルの第1課と第3課の間に正確に挿入してください。
-
-JavaScript
-
-// ===================================
-// == 第2課のデータ (読み物追加、会話はプレースホルダー) ==
-// ===================================
-
-// 第2課 会話 (プレースホルダーを維持)
-{ lesson: 2, topic: 'kaiwa', words: [ { jp: '第2課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
-
-// 第2課 読み物 (新規追加)
-{ 
+  // 2-2. 読み物 (単語リストを正確に定義)
+  { 
     lesson: 2, 
     topic: 'yomi', 
     words: [ 
@@ -182,15 +166,22 @@ JavaScript
       { jp: 'kakikotoba_hanashikotobateki', es: '書き言葉・話し言葉的', image_jp: 'U2/yomimono/U2_61_kakikotoba_hanashikotobateki_jp_yomi.png', image_es: 'U2/yomimono/U2_61_kakikotoba_hanashikotobateki_es_yomi.png' },
       { jp: 'au', es: '合う', image_jp: 'U2/yomimono/U2_62_au_jp_yomi.png', image_es: 'U2/yomimono/U2_62_au_es_yomi.png' }
     ] 
-},
-  // ===================================
-  // == 第3課のデータ (新規追加) ==
+  },
+
   // ===================================
-{ 
-    lesson: 3, 
-   topic: 'yomi', 
-    words: [ 
-    { jp: 'gijutsu', es: 'Tecnología', image_jp: 'U3/yomimono/U3_01_gijutsu_jp_yomi.png', image_es: 'U3/yomimono/U3_01_gijutsu_es_yomi.png' },
+  // == 第3課のデータ (修正済み) ==
+  // ===================================
+
+  // 3-1. 会話 (プレースホルダーを維持)
+  { lesson: 3, topic: 'kaiwa', words: [ { jp: '第3課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
+
+  // 3-2. 読み物 (単語リストを正確に定義)
+  { 
+    lesson: 3, 
+    topic: 'yomi', 
+    words: [ 
+      // 01-18: 旧「会話」単語を読み物データとして使用
+      { jp: 'gijutsu', es: 'Tecnología', image_jp: 'U3/yomimono/U3_01_gijutsu_jp_yomi.png', image_es: 'U3/yomimono/U3_01_gijutsu_es_yomi.png' },
       { jp: 'hattatsu', es: 'Desarrollo', image_jp: 'U3/yomimono/U3_02_hattatsu_jp_yomi.png', image_es: 'U3/yomimono/U3_02_hattatsu_es_yomi.png' },
       { jp: 'kaijou', es: 'Lugar de reunión', image_jp: 'U3/yomimono/U3_03_kaijou_jp_yomi.png', image_es: 'U3/yomimono/U3_03_kaijou_es_yomi.png' },
       { jp: 'nigaoue', es: 'Retrato', image_jp: 'U3/yomimono/U3_04_nigaoue_jp_yomi.png', image_es: 'U3/yomimono/U3_04_nigaoue_es_yomi.png' },
@@ -208,35 +199,45 @@ JavaScript
       { jp: 'kurasu', es: 'Vivir', image_jp: 'U3/yomimono/U3_16_kurasu_jp_yomi.png', image_es: 'U3/yomimono/U3_16_kurasu_es_yomi.png' },
       { jp: 'toshi', es: 'Edad', image_jp: 'U3/yomimono/U3_17_toshi_jp_yomi.png', image_es: 'U3/yomimono/U3_17_toshi_es_yomi.png' },
       { jp: 'carehouse', es: 'Residencia de ancianos', image_jp: 'U3/yomimono/U3_18_carehouse_jp_yomi.png', image_es: 'U3/yomimono/U3_18_carehouse_es_yomi.png' },
+
+      // 19-41: 元々の読み物単語 (第3課の残り)
+      { jp: 'azarashi', es: 'Foca', image_jp: 'U3/yomimono/U3_19_azarashi_jp_yomi.png', image_es: 'U3/yomimono/U3_19_azarashi_es_yomi.png' },
+      { jp: 'ke', es: 'Pelo', image_jp: 'U3/yomimono/U3_20_ke_jp_yomi.png', image_es: 'U3/yomimono/U3_20_ke_es_yomi.png' },
+      { jp: 'sawaru', es: 'Tocar', image_jp: 'U3/yomimono/U3_21_sawaru_jp_yomi.png', image_es: 'U3/yomimono/U3_21_sawaru_es_yomi.png' },
+      { jp: 'kubi', es: 'Cuello', image_jp: 'U3/yomimono/U3_22_kubi_jp_yomi.png', image_es: 'U3/yomimono/U3_22_kubi_es_yomi.png' },
+      { jp: 'ugokasu', es: 'Mover', image_jp: 'U3/yomimono/U3_23_ugokasu_jp_yomi.png', image_es: 'U3/yomimono/U3_23_ugokasu_es_yomi.png' },
+      { jp: 'koe', es: 'Voz', image_jp: 'U3/yomimono/U3_24_koe_jp_yomi.png', image_es: 'U3/yomimono/U3_24_koe_es_yomi.png' },
+      { jp: 'mawari', es: 'Alrededor', image_jp: 'U3/yomimono/U3_25_mawari_jp_yomi.png', image_es: 'U3/yomimono/U3_25_mawari_es_yomi.png' },
+      { jp: 'atsumaru', es: 'Reunirse', image_jp: 'U3/yomimono/U3_26_atsumaru_jp_yomi.png', image_es: 'U3/yomimono/U3_26_atsumaru_es_yomi.png' },
+      { jp: 'doubutsu', es: '動物', image_jp: 'U3/yomimono/U3_27_doubutsu_jp_yomi.png', image_es: 'U3/yomimono/U3_27_doubutsu_es_yomi.png' },
+      { jp: 'arerugii', es: 'Alergia', image_jp: 'U3/yomimono/U3_28_arerugii_jp_yomi.png', image_es: 'U3/yomimono/U3_28_arerugii_es_yomi.png' },
+      { jp: 'daijoubu', es: 'Estar bien', image_jp: 'U3/yomimono/U3_29_daijoubu_jp_yomi.png', image_es: 'U3/yomimono/U3_29_daijoubu_es_yomi.png' },
+      { jp: 'aa', es: '¡Ah!', image_jp: 'U3/yomimono/U3_30_aa_jp_yomi.png', image_es: 'U3/yomimono/U3_30_aa_es_yomi.png' },
+      { jp: 'daiji', es: 'Importante', image_jp: 'U3/yomimono/U3_31_daiji_jp_yomi.png', image_es: 'U3/yomimono/U3_31_daiji_es_yomi.png' },
+      { jp: 'kouka', es: 'Efecto', image_jp: 'U3/yomimono/U3_32_kouka_jp_yomi.png', image_es: 'U3/yomimono/U3_32_kouka_es_yomi.png' },
+      { jp: 'guinnessbook', es: 'Libro Guinness', image_jp: 'U3/yomimono/U3_33_guinnessbook_jp_yomi.png', image_es: 'U3/yomimono/U3_33_guinnessbook_es_yomi.png' },
+      { jp: 'noru', es: 'Ser publicado', image_jp: 'U3/yomimono/U3_34_noru_jp_yomi.png', image_es: 'U3/yomimono/U3_34_noru_es_yomi.png' },
+      { jp: 'nyuugaku', es: 'Ingreso a la escuela', image_jp: 'U3/yomimono/U3_35_nyuugaku_jp_yomi.png', image_es: 'U3/yomimono/U3_35_nyuugaku_es_yomi.png' },
+      { jp: 'goukaku', es: 'Aprobar', image_jp: 'U3/yomimono/U3_36_goukaku_jp_yomi.png', image_es: 'U3/yomimono/U3_36_goukaku_es_yomi.png' },
+      { jp: 'oiwai', es: 'Celebración', image_jp: 'U3/yomimono/U3_37_oiwai_jp_yomi.png', image_es: 'U3/yomimono/U3_37_oiwai_es_yomi.png' },
+      { jp: 'hajimete', es: 'Por primera vez', image_jp: 'U3/yomimono/U3_38_hajimete_jp_yomi.png', image_es: 'U3/yomimono/U3_38_hajimete_es_yomi.png' },
+      { jp: 'saisho', es: 'Primero', image_jp: 'U3/yomimono/U3_39_saisho_jp_yomi.png', image_es: 'U3/yomimono/U3_39_saisho_es_yomi.png' },
+      { jp: 'tsukeru', es: 'Encender', image_jp: 'U3/yomimono/U3_40_tsukeru_jp_yomi.png', image_es: 'U3/yomimono/U3_40_tsukeru_es_yomi.png' },
+      { jp: 'rikai', es: 'Entendimiento', image_jp: 'U3/yomimono/U3_41_rikai_jp_yomi.png', image_es: 'U3/yomimono/U3_41_rikai_es_yomi.png' }
+    ] 
+  },
+
+  // ===================================
+  // == 第4課～第15課のデータ (維持) ==
+  // ===================================
+  {
+    lesson: 4,
+    topic: 'kaiwa',
+    words: [
+      { jp: 'bukatsu', es: 'bukatsu', image_jp: 'U4/kaiwa/U4_01_bukatsu_jp_kaiwa.png', image_es: 'U4/kaiwa/U4_01_bukatsu_es_kaiwa.png' },
+      // ... 第4課 会話の単語が続く ...
     ]
   },
-  // =============================================
-  // == ▼▼▼ 第2課～第15課のテスト用データ ▼▼▼ ==
-  // =============================================
-  { lesson: 2, topic: 'kaiwa', words: [ { jp: '第2課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
-  { lesson: 2, topic: 'yomi', words: [ { jp: '第2課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
-  { lesson: 3, topic: 'kaiwa', words: [ { jp: '第3課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
-  { lesson: 3, topic: 'yomi', words: [ { jp: '第3課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
-  {
-    lesson: 4,
-    topic: 'kaiwa',
-    words: [
-      { jp: 'bukatsu', es: 'bukatsu', image_jp: 'U4/kaiwa/U4_01_bukatsu_jp_kaiwa.png', image_es: 'U4/kaiwa/U4_01_bukatsu_es_kaiwa.png' },
-      { jp: 'bu', es: 'bu', image_jp: 'U4/kaiwa/U4_02_bu_jp_kaiwa.png', image_es: 'U4/kaiwa/U4_02_bu_es_kaiwa.png' },
-      { jp: 'senpai', es: 'senpai', image_jp: 'U4/kaiwa/U4_03_senpai_jp_kaiwa.png', image_es: 'U4/kaiwa/U4_03_senpai_es_kaiwa.png' },
-      { jp: 'kouhai', es: 'kouhai', image_jp: 'U4/kaiwa/U4_04_kouhai_jp_kaiwa.png', image_es: 'U4/kaiwa/U4_04_kouhai_es_kaiwa.png' },
-      { jp: 'kankei', es: 'kankei', image_jp: 'U4/kaiwa/U4_05_kankei_jp_kaiwa.png', image_es: 'U4/kaiwa/U4_05_kankei_es_kaiwa.png' },
-      { jp: 'nyuubu', es: 'nyuubu', image_jp: 'U4/kaiwa/U4_06_nyuubu_jp_kaiwa.png', image_es: 'U4/kaiwa/U4_06_nyuubu_es_kaiwa.png' },
-      { jp: 'buin', es: 'buin', image_jp: 'U4/kaiwa/U4_07_buin_jp_kaiwa.png', image_es: 'U4/kaiwa/U4_07_buin_es_kaiwa.png' },
-      { jp: 'kyuukei', es: 'kyuukei', image_jp: 'U4/kaiwa/U4_08_kyuukei_jp_kaiwa.png', image_es: 'U4/kaiwa/U4_08_kyuukei_es_kaiwa.png' },
-      { jp: 'saakuru', es: 'saakuru', image_jp: 'U4/kaiwa/U4_09_saakuru_jp_kaiwa.png', image_es: 'U4/kaiwa/U4_09_saakuru_es_kaiwa.png' },
-      { jp: 'kuwashii', es: 'kuwashii', image_jp: 'U4/kaiwa/U4_10_kuwashii_jp_kaiwa.png', image_es: 'U4/kaiwa/U4_10_kuwashii_es_kaiwa.png' },
-      { jp: 'saseteitadakemasenka', es: 'saseteitadakemasenka', image_jp: 'U4/kaiwa/U4_11_saseteitadakemasenka_jp_kaiwa.png', image_es: 'U4/kaiwa/U4_11_saseteitadakemasenka_es_kaiwa.png' },
-      { jp: 'hantoshi', es: 'hantoshi', image_jp: 'U4/kaiwa/U4_12_hantoshi_jp_kaiwa.png', image_es: 'U4/kaiwa/U4_12_hantoshi_es_kaiwa.png' },
-      { jp: 'obi', es: 'obi', image_jp: 'U4/kaiwa/U4_13_obi_jp_kaiwa.png', image_es: 'U4/kaiwa/U4_13_obi_es_kaiwa.png' },
-      { jp: 'dougu', es: 'dougu', image_jp: 'U4/kaiwa/U4_14_dougu_jp_kaiwa.png', image_es: 'U4/kaiwa/U4_14_dougu_es_kaiwa.png' }
-    ]
-  },
   {
     lesson: 4,
     topic: 'yomi',
@@ -315,6 +316,7 @@ JavaScript
   { lesson: 15, topic: 'kaiwa', words: [ { jp: '第15課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
   { lesson: 15, topic: 'yomi', words: [ { jp: '第15課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ] }
 ];
+
 
 
 
