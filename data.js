@@ -97,7 +97,7 @@ const cardData = [
     lesson: 3, 
    topic: 'yomi', 
     words: [ 
-     { jp: 'gijutsu', es: 'Tecnología', image_jp: 'U3/yomimono/U3_01_gijutsu_jp_yomi.png', image_es: 'U3/yomimono/U3_01_gijutsu_es_yomi.png' },
+    { jp: 'gijutsu', es: 'Tecnología', image_jp: 'U3/yomimono/U3_01_gijutsu_jp_yomi.png', image_es: 'U3/yomimono/U3_01_gijutsu_es_yomi.png' },
       { jp: 'hattatsu', es: 'Desarrollo', image_jp: 'U3/yomimono/U3_02_hattatsu_jp_yomi.png', image_es: 'U3/yomimono/U3_02_hattatsu_es_yomi.png' },
       { jp: 'kaijou', es: 'Lugar de reunión', image_jp: 'U3/yomimono/U3_03_kaijou_jp_yomi.png', image_es: 'U3/yomimono/U3_03_kaijou_es_yomi.png' },
       { jp: 'nigaoue', es: 'Retrato', image_jp: 'U3/yomimono/U3_04_nigaoue_jp_yomi.png', image_es: 'U3/yomimono/U3_04_nigaoue_es_yomi.png' },
@@ -114,7 +114,7 @@ const cardData = [
       { jp: 'ningen', es: 'Ser humano', image_jp: 'U3/yomimono/U3_15_ningen_jp_yomi.png', image_es: 'U3/yomimono/U3_15_ningen_es_yomi.png' },
       { jp: 'kurasu', es: 'Vivir', image_jp: 'U3/yomimono/U3_16_kurasu_jp_yomi.png', image_es: 'U3/yomimono/U3_16_kurasu_es_yomi.png' },
       { jp: 'toshi', es: 'Edad', image_jp: 'U3/yomimono/U3_17_toshi_jp_yomi.png', image_es: 'U3/yomimono/U3_17_toshi_es_yomi.png' },
-      { jp: 'carehouse', es: 'Residencia de ancianos', image_jp: 'U3/yomimono/U3_18_carehouse_jp_yomi.png', image_es: 'U3/yomimono/U3_18_carehouse_es_yomi.png' }
+      { jp: 'carehouse', es: 'Residencia de ancianos', image_jp: 'U3/yomimono/U3_18_carehouse_jp_yomi.png', image_es: 'U3/yomimono/U3_18_carehouse_es_yomi.png' },
     ]
   },
   // =============================================
@@ -222,6 +222,7 @@ const cardData = [
   { lesson: 15, topic: 'kaiwa', words: [ { jp: '第15課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
   { lesson: 15, topic: 'yomi', words: [ { jp: '第15課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ] }
 ];
+
 
 
 
