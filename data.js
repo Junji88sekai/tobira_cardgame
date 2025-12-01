@@ -95,7 +95,7 @@ const cardData = [
   // ===================================
 { 
     lesson: 3, 
-   topic: 'kaiwa', 
+   topic: 'yomi', 
     words: [ 
       { jp: 'gijutsu', es: 'Tecnología', image_jp: 'U3/kaiwa/U3_01_gijutsu_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_01_gijutsu_es_kaiwa.png' },
       { jp: 'hattatsu', es: 'Desarrollo', image_jp: 'U3/kaiwa/U3_02_hattatsu_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_02_hattatsu_es_kaiwa.png' },
@@ -222,6 +222,7 @@ const cardData = [
   { lesson: 15, topic: 'kaiwa', words: [ { jp: '第15課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
   { lesson: 15, topic: 'yomi', words: [ { jp: '第15課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ] }
 ];
+
 
 
 
