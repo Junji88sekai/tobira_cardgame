@@ -90,7 +90,38 @@ const cardData = [
       { jp: 'kengaku', es: 'kengaku', image_jp: 'U1/yomimono/U1_45_kengaku_jp_yomi.png', image_es: 'U1/yomimono/U1_45_kengaku_es_yomi.png' }
     ]
   },
-
+  // ===================================
+  // == 第3課のデータ (新規追加) ==
+  // ===================================
+{ 
+    lesson: 3, 
+    topic: 'yomi', 
+    words: [ 
+      { jp: 'azarashi', es: 'Foca', image_jp: 'U3/yomimono/U3_01_azarashi_jp_yomi.png', image_es: 'U3/yomimono/U3_01_azarashi_es_yomi.png' },
+      { jp: 'ke', es: 'Pelo', image_jp: 'U3/yomimono/U3_02_ke_jp_yomi.png', image_es: 'U3/yomimono/U3_02_ke_es_yomi.png' },
+      { jp: 'sawaru', es: 'Tocar', image_jp: 'U3/yomimono/U3_03_sawaru_jp_yomi.png', image_es: 'U3/yomimono/U3_03_sawaru_es_yomi.png' },
+      { jp: 'kubi', es: 'Cuello', image_jp: 'U3/yomimono/U3_04_kubi_jp_yomi.png', image_es: 'U3/yomimono/U3_04_kubi_es_yomi.png' },
+      { jp: 'ugokasu', es: 'Mover', image_jp: 'U3/yomimono/U3_05_ugokasu_jp_yomi.png', image_es: 'U3/yomimono/U3_05_ugokasu_es_yomi.png' },
+      { jp: 'koe', es: 'Voz', image_jp: 'U3/yomimono/U3_06_koe_jp_yomi.png', image_es: 'U3/yomimono/U3_06_koe_es_yomi.png' },
+      { jp: 'mawari', es: 'Alrededor', image_jp: 'U3/yomimono/U3_07_mawari_jp_yomi.png', image_es: 'U3/yomimono/U3_07_mawari_es_yomi.png' },
+      { jp: 'atsumaru', es: 'Reunirse', image_jp: 'U3/yomimono/U3_08_atsumaru_jp_yomi.png', image_es: 'U3/yomimono/U3_08_atsumaru_es_yomi.png' },
+      { jp: 'doubutsu', es: '動物', image_jp: 'U3/yomimono/U3_09_doubutsu_jp_yomi.png', image_es: 'U3/yomimono/U3_09_doubutsu_es_yomi.png' },
+      { jp: 'arerugii', es: 'Alergia', image_jp: 'U3/yomimono/U3_10_arerugii_jp_yomi.png', image_es: 'U3/yomimono/U3_10_arerugii_es_yomi.png' },
+      { jp: 'daijoubu', es: 'Estar bien', image_jp: 'U3/yomimono/U3_11_daijoubu_jp_yomi.png', image_es: 'U3/yomimono/U3_11_daijoubu_es_yomi.png' },
+      { jp: 'aa', es: '¡Ah!', image_jp: 'U3/yomimono/U3_12_aa_jp_yomi.png', image_es: 'U3/yomimono/U3_12_aa_es_yomi.png' },
+      { jp: 'daiji', es: 'Importante', image_jp: 'U3/yomimono/U3_13_daiji_jp_yomi.png', image_es: 'U3/yomimono/U3_13_daiji_es_yomi.png' },
+      { jp: 'kouka', es: 'Efecto', image_jp: 'U3/yomimono/U3_14_kouka_jp_yomi.png', image_es: 'U3/yomimono/U3_14_kouka_es_yomi.png' },
+      { jp: 'guinnessbook', es: 'Libro Guinness', image_jp: 'U3/yomimono/U3_15_guinnessbook_jp_yomi.png', image_es: 'U3/yomimono/U3_15_guinnessbook_es_yomi.png' },
+      { jp: 'noru', es: 'Ser publicado', image_jp: 'U3/yomimono/U3_16_noru_jp_yomi.png', image_es: 'U3/yomimono/U3_16_noru_es_yomi.png' },
+      { jp: 'nyuugaku', es: 'Ingreso a la escuela', image_jp: 'U3/yomimono/U3_17_nyuugaku_jp_yomi.png', image_es: 'U3/yomimono/U3_17_nyuugaku_es_yomi.png' },
+      { jp: 'goukaku', es: 'Aprobar', image_jp: 'U3/yomimono/U3_18_goukaku_jp_yomi.png', image_es: 'U3/yomimono/U3_18_goukaku_es_yomi.png' },
+      { jp: 'oiwai', es: 'Celebración', image_jp: 'U3/yomimono/U3_19_oiwai_jp_yomi.png', image_es: 'U3/yomimono/U3_19_oiwai_es_yomi.png' },
+      { jp: 'hajimete', es: 'Por primera vez', image_jp: 'U3/yomimono/U3_20_hajimete_jp_yomi.png', image_es: 'U3/yomimono/U3_20_hajimete_es_yomi.png' },
+      { jp: 'saisho', es: 'Primero', image_jp: 'U3/yomimono/U3_21_saisho_jp_yomi.png', image_es: 'U3/yomimono/U3_21_saisho_es_yomi.png' },
+      { jp: 'tsukeru', es: 'Encender', image_jp: 'U3/yomimono/U3_22_tsukeru_jp_yomi.png', image_es: 'U3/yomimono/U3_22_tsukeru_es_yomi.png' },
+      { jp: 'rikai', es: 'Entendimiento', image_jp: 'U3/yomimono/U3_23_rikai_jp_yomi.png', image_es: 'U3/yomimono/U3_23_rikai_es_yomi.png' }
+    ] 
+  },
   // =============================================
   // == ▼▼▼ 第2課～第15課のテスト用データ ▼▼▼ ==
   // =============================================
@@ -196,4 +227,5 @@ const cardData = [
   { lesson: 15, topic: 'kaiwa', words: [ { jp: '第15課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
   { lesson: 15, topic: 'yomi', words: [ { jp: '第15課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ] }
 ];
+
 
