@@ -90,6 +90,99 @@ const cardData = [
       { jp: 'kengaku', es: 'kengaku', image_jp: 'U1/yomimono/U1_45_kengaku_jp_yomi.png', image_es: 'U1/yomimono/U1_45_kengaku_es_yomi.png' }
     ]
   },
+  承知いたしました。第2課（U2）の「読み物」（topic: 'yomi'）のデータをご提供いただいたファイル名とナンバリングに基づいて追加します。
+
+このデータは、既存の第2課のプレースホルダーを置き換える形で挿入します。
+
+✅ 第2課データの修正案
+💻 修正点
+既存の第2課のプレースホルダー（会話と読み物）を削除します。
+
+第2課の「読み物」（topic: 'yomi'）ブロックを新規作成し、ご提供のリストに従って単語とパス（U2/yomimono/）を定義します。
+
+今回は会話データがないため、第2課の「会話」（topic: 'kaiwa'）については後で追加するためのプレースホルダーを残しておきます。
+
+📄 修正後の cardData（抜粋）
+以下のコードを、あなたのdata.jsファイルの第1課と第3課の間に正確に挿入してください。
+
+JavaScript
+
+// ===================================
+// == 第2課のデータ (読み物追加、会話はプレースホルダー) ==
+// ===================================
+
+// 第2課 会話 (プレースホルダーを維持)
+{ lesson: 2, topic: 'kaiwa', words: [ { jp: '第2課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
+
+// 第2課 読み物 (新規追加)
+{ 
+    lesson: 2, 
+    topic: 'yomi', 
+    words: [ 
+      { jp: 'keigo', es: 'Lenguaje honorífico', image_jp: 'U2/yomimono/U2_01_keigo_jp_yomi.png', image_es: 'U2/yomimono/U2_01_keigo_es_yomi.png' },
+      { jp: 'kudaketa', es: 'Lenguaje informal', image_jp: 'U2/yomimono/U2_02_kudaketa_jp_yomi.png', image_es: 'U2/yomimono/U2_02_kudaketa_es_yomi.png' },
+      { jp: 'jitsuwa', es: 'En realidad', image_jp: 'U2/yomimono/U2_03_jitsuwa_jp_yomi.png', image_es: 'U2/yomimono/U2_03_jitsuwa_es_yomi.png' },
+      { jp: 'fukuzatsu', es: 'Complicado', image_jp: 'U2/yomimono/U2_04_fukuzatsu_jp_yomi.png', image_es: 'U2/yomimono/U2_04_fukuzatsu_es_yomi.png' },
+      { jp: 'kimari', es: 'Regla', image_jp: 'U2/yomimono/U2_05_kimari_jp_yomi.png', image_es: 'U2/yomimono/U2_05_kimari_es_yomi.png' },
+      { jp: 'ka', es: '（疑問詞）', image_jp: 'U2/yomimono/U2_06_ka_jp_yomi.png', image_es: 'U2/yomimono/U2_06_ka_es_yomi.png' },
+      { jp: 'teinei', es: 'Educado', image_jp: 'U2/yomimono/U2_07_teinei_jp_yomi.png', image_es: 'U2/yomimono/U2_07_teinei_es_yomi.png' },
+      { jp: 'tsukaiwake', es: 'Uso adecuado', image_jp: 'U2/yomimono/U2_08_tsukaiwake_jp_yomi.png', image_es: 'U2/yomimono/U2_08_tsukaiwake_es_yomi.png' },
+      { jp: 'gengo', es: 'Idioma', image_jp: 'U2/yomimono/U2_09_gengo_jp_yomi.png', image_es: 'U2/yomimono/U2_09_gengo_es_yomi.png' },
+      { jp: 'aite', es: 'Interlocutor', image_jp: 'U2/yomimono/U2_10_aite_jp_yomi.png', image_es: 'U2/yomimono/U2_10_aite_es_yomi.png' },
+      { jp: 'kaeru', es: '変える', image_jp: 'U2/yomimono/U2_11_kaeru_jp_yomi.png', image_es: 'U2/yomimono/U2_11_kaeru_es_yomi.png' },
+      { jp: 'bubun', es: 'Parte', image_jp: 'U2/yomimono/U2_12_bubun_jp_yomi.png', image_es: 'U2/yomimono/U2_12_bubun_es_yomi.png' },
+      { jp: 'dansei', es: 'Hombre', image_jp: 'U2/yomimono/U2_13_dansei_jp_yomi.png', image_es: 'U2/yomimono/U2_13_dansei_es_yomi.png' },
+      { jp: 'josei', es: 'Mujer', image_jp: 'U2/yomimono/U2_14_josei_jp_yomi.png', image_es: 'U2/yomimono/U2_14_josei_es_yomi.png' },
+      { jp: 'kuraberu', es: '比べる', image_jp: 'U2/yomimono/U2_15_kuraberu_jp_yomi.png', image_es: 'U2/yomimono/U2_15_kuraberu_es_yomi.png' },
+      { jp: 'bunmatsu', es: 'Final de la frase', image_jp: 'U2/yomimono/U2_16_bunmatsu_jp_yomi.png', image_es: 'U2/yomimono/U2_16_bunmatsu_es_yomi.png' },
+      { jp: 'arawareru', es: '現れる', image_jp: 'U2/yomimono/U2_17_arawareru_jp_yomi.png', image_es: 'U2/yomimono/U2_17_arawareru_es_yomi.png' },
+      { jp: 'anokata', es: 'Esa persona (formal)', image_jp: 'U2/yomimono/U2_18_anokata_jp_yomi.png', image_es: 'U2/yomimono/U2_18_anokata_es_yomi.png' },
+      { jp: 'aitsu', es: 'Ese tipo (muy informal)', image_jp: 'U2/yomimono/U2_19_aitsu_jp_yomi.png', image_es: 'U2/yomimono/U2_19_aitsu_es_yomi.png' },
+      { jp: 'kanji', es: 'Sentimiento', image_jp: 'U2/yomimono/U2_20_kanji_jp_yomi.png', image_es: 'U2/yomimono/U2_20_kanji_es_yomi.png' },
+      { jp: 'ooku', es: '多くの', image_jp: 'U2/yomimono/U2_21_ooku_jp_yomi.png', image_es: 'U2/yomimono/U2_21_ooku_es_yomi.png' },
+      { jp: 'bamen', es: 'Escena / Situación', image_jp: 'U2/yomimono/U2_22_bamen_jp_yomi.png', image_es: 'U2/yomimono/U2_22_bamen_es_yomi.png' },
+      { jp: 'kansatsu', es: 'Observación', image_jp: 'U2/yomimono/U2_23_kansatsu_jp_yomi.png', image_es: 'U2/yomimono/U2_23_kansatsu_es_yomi.png' },
+      { jp: 'omote', es: 'Parte frontal', image_jp: 'U2/yomimono/U2_24_omote_jp_yomi.png', image_es: 'U2/yomimono/U2_24_omote_es_yomi.png' },
+      { jp: 'danjo', es: 'Hombres y mujeres', image_jp: 'U2/yomimono/U2_25_danjo_jp_yomi.png', image_es: 'U2/yomimono/U2_25_danjo_es_yomi.png' },
+      { jp: 'ore', es: 'Yo (informal masculino)', image_jp: 'U2/yomimono/U2_26_ore_jp_yomi.png', image_es: 'U2/yomimono/U2_26_ore_es_yomi.png' },
+      { jp: 'konoatari', es: 'Alrededor de aquí', image_jp: 'U2/yomimono/U2_27_konoatari_jp_yomi.png', image_es: 'U2/yomimono/U2_27_konoatari_es_yomi.png' },
+      { jp: 'ogoru', es: 'Invitar', image_jp: 'U2/yomimono/U2_28_ogoru_jp_yomi.png', image_es: 'U2/yomimono/U2_28_ogoru_es_yomi.png' },
+      { jp: 'zuibun', es: 'Bastante', image_jp: 'U2/yomimono/U2_29_zuibun_jp_yomi.png', image_es: 'U2/yomimono/U2_29_zuibun_es_yomi.png' },
+      { jp: 'moji', es: '文字', image_jp: 'U2/yomimono/U2_30_moji_jp_yomi.png', image_es: 'U2/yomimono/U2_30_moji_es_yomi.png' },
+      { jp: 'koibito', es: 'Pareja', image_jp: 'U2/yomimono/U2_31_koibito_jp_yomi.png', image_es: 'U2/yomimono/U2_31_koibito_es_yomi.png' },
+      { jp: 'rei', es: '例', image_jp: 'U2/yomimono/U2_32_rei_jp_yomi.png', image_es: 'U2/yomimono/U2_32_rei_es_yomi.png' },
+      { jp: 'hyougen', es: '表現', image_jp: 'U2/yomimono/U2_33_hyougen_jp_yomi.png', image_es: 'U2/yomimono/U2_33_hyougen_es_yomi.png' },
+      { jp: 'shouryaku', es: '省略', image_jp: 'U2/yomimono/U2_34_shouryaku_jp_yomi.png', image_es: 'U2/yomimono/U2_34_shouryaku_es_yomi.png' },
+      { jp: 'tanshukukei', es: '短縮形', image_jp: 'U2/yomimono/U2_35_tanshukukei_jp_yomi.png', image_es: 'U2/yomimono/U2_35_tanshukukei_es_yomi.png' },
+      { jp: 'saigo', es: '最後', image_jp: 'U2/yomimono/U2_36_saigo_jp_yomi.png', image_es: 'U2/yomimono/U2_36_saigo_es_yomi.png' },
+      { jp: 'renraku', es: '連絡', image_jp: 'U2/yomimono/U2_37_renraku_jp_yomi.png', image_es: 'U2/yomimono/U2_37_renraku_es_yomi.png' },
+      { jp: 'hakkiri', es: 'Claramente', image_jp: 'U2/yomimono/U2_38_hakkiri_jp_yomi.png', image_es: 'U2/yomimono/U2_38_hakkiri_es_yomi.png' },
+      { jp: 'sasou', es: '誘う', image_jp: 'U2/yomimono/U2_39_sasou_jp_yomi.png', image_es: 'U2/yomimono/U2_39_sasou_es_yomi.png' },
+      { jp: 'kotowaru', es: '断る', image_jp: 'U2/yomimono/U2_40_kotowaru_jp_yomi.png', image_es: 'U2/yomimono/U2_40_kotowaru_es_yomi.png' },
+      { jp: 'tsugouwarui', es: '不都合', image_jp: 'U2/yomimono/U2_41_tsugouwarui_jp_yomi.png', image_es: 'U2/yomimono/U2_41_tsugouwarui_es_yomi.png' },
+      { jp: 'kibun', es: '気分', image_jp: 'U2/yomimono/U2_42_kibun_jp_yomi.png', image_es: 'U2/yomimono/U2_42_kibun_es_yomi.png' },
+      { jp: 'onegai', es: '願い', image_jp: 'U2/yomimono/U2_43_onegai_jp_yomi.png', image_es: 'U2/yomimono/U2_43_onegai_es_yomi.png' },
+      { jp: 'taisetsunisuru', es: '大切にする', image_jp: 'U2/yomimono/U2_44_taisetsunisuru_jp_yomi.png', image_es: 'U2/yomimono/U2_44_taisetsunisuru_es_yomi.png' },
+      { jp: 'hanashikotoba', es: '話し言葉', image_jp: 'U2/yomimono/U2_45_hanashikotoba_jp_yomi.png', image_es: 'U2/yomimono/U2_45_hanashikotoba_es_yomi.png' },
+      { jp: 'kantanna', es: '簡単な', image_jp: 'U2/yomimono/U2_46_kantanna_jp_yomi.png', image_es: 'U2/yomimono/U2_46_kantanna_es_yomi.png' },
+      { jp: 'kouiu', es: 'こういう', image_jp: 'U2/yomimono/U2_47_kouiu_jp_yomi.png', image_es: 'U2/yomimono/U2_47_kouiu_es_yomi.png' },
+      { jp: 'nareru', es: '慣れる', image_jp: 'U2/yomimono/U2_48_nareru_jp_yomi.png', image_es: 'U2/yomimono/U2_48_nareru_es_yomi.png' },
+      { jp: 'funiki', es: '雰囲気', image_jp: 'U2/yomimono/U2_49_funiki_jp_yomi.png', image_es: 'U2/yomimono/U2_49_funiki_es_yomi.png' },
+      { jp: 'riyuu', es: '理由', image_jp: 'U2/yomimono/U2_50_riyuu_jp_yomi.png', image_es: 'U2/yomimono/U2_50_riyuu_es_yomi.png' },
+      { jp: 'joukyou', es: '状況', image_jp: 'U2/yomimono/U2_51_joukyou_jp_yomi.png', image_es: 'U2/yomimono/U2_51_joukyou_es_yomi.png' },
+      { jp: 'konoyouna', es: 'このような', image_jp: 'U2/yomimono/U2_52_konoyouna_jp_yomi.png', image_es: 'U2/yomimono/U2_52_konoyouna_es_yomi.png' },
+      { jp: 'tokuchou', es: '特徴', image_jp: 'U2/yomimono/U2_53_tokuchou_jp_yomi.png', image_es: 'U2/yomimono/U2_53_tokuchou_es_yomi.png' },
+      { jp: 'tokuchou_kakikotoba', es: '特徴（書き言葉）', image_jp: 'U2/yomimono/U2_54_tokuchou_kakikotoba_jp_yomi.png', image_es: 'U2/yomimono/U2_54_tokuchou_kakikotoba_es_yomi.png' },
+      { jp: 'hitsuyou', es: '必要', image_jp: 'U2/yomimono/U2_55_hitsuyou_jp_yomi.png', image_es: 'U2/yomimono/U2_55_hitsuyou_es_yomi.png' },
+      { jp: 'keitai', es: '形態', image_jp: 'U2/yomimono/U2_56_keitai_jp_yomi.png', image_es: 'U2/yomimono/U2_56_keitai_es_yomi.png' },
+      { jp: 'futsuu', es: '普通', image_jp: 'U2/yomimono/U2_57_futsuu_jp_yomi.png', image_es: 'U2/yomimono/U2_57_futsuu_es_yomi.png' },
+      { jp: 'tai', es: '体', image_jp: 'U2/yomimono/U2_58_tai_jp_yomi.png', image_es: 'U2/yomimono/U2_58_tai_es_yomi.png' },
+      { jp: 'ronbun', es: '論文', image_jp: 'U2/yomimono/U2_59_ronbun_jp_yomi.png', image_es: 'U2/yomimono/U2_59_ronbun_es_yomi.png' },
+      { jp: 'kyoumikubukai', es: '興味深い', image_jp: 'U2/yomimono/U2_60_kyoumikubukai_jp_yomi.png', image_es: 'U2/yomimono/U2_60_kyoumikubukai_es_yomi.png' },
+      { jp: 'kakikotoba_hanashikotobateki', es: '書き言葉・話し言葉的', image_jp: 'U2/yomimono/U2_61_kakikotoba_hanashikotobateki_jp_yomi.png', image_es: 'U2/yomimono/U2_61_kakikotoba_hanashikotobateki_es_yomi.png' },
+      { jp: 'au', es: '合う', image_jp: 'U2/yomimono/U2_62_au_jp_yomi.png', image_es: 'U2/yomimono/U2_62_au_es_yomi.png' }
+    ] 
+},
   // ===================================
   // == 第3課のデータ (新規追加) ==
   // ===================================
@@ -222,6 +315,7 @@ const cardData = [
   { lesson: 15, topic: 'kaiwa', words: [ { jp: '第15課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
   { lesson: 15, topic: 'yomi', words: [ { jp: '第15課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ] }
 ];
+
 
 
 
