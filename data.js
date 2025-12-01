@@ -97,25 +97,25 @@ const cardData = [
     lesson: 3, 
    topic: 'yomi', 
     words: [ 
-      { jp: 'gijutsu', es: 'Tecnología', image_jp: 'U3/kaiwa/U3_01_gijutsu_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_01_gijutsu_es_kaiwa.png' },
-      { jp: 'hattatsu', es: 'Desarrollo', image_jp: 'U3/kaiwa/U3_02_hattatsu_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_02_hattatsu_es_kaiwa.png' },
-      { jp: 'kaijou', es: 'Lugar de reunión', image_jp: 'U3/kaiwa/U3_03_kaijou_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_03_kaijou_es_kaiwa.png' },
-      { jp: 'nigaoue', es: 'Retrato', image_jp: 'U3/kaiwa/U3_04_nigaoue_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_04_nigaoue_es_kaiwa.png' },
-      { jp: 'kaku', es: 'Dibujar', image_jp: 'U3/kaiwa/U3_05_kaku_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_05_kaku_es_kaiwa.png' },
-      { jp: 'kumo', es: 'Nube', image_jp: 'U3/kaiwa/U3_06_kumo_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_06_kumo_es_kaiwa.png' },
-      { jp: 'tenjou', es: 'Techo', image_jp: 'U3/kaiwa/U3_07_tenjou_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_07_tenjou_es_kaiwa.png' },
-      { jp: 'shujutsu', es: 'Operación', image_jp: 'U3/kaiwa/U3_08_shujutsu_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_08_shujutsu_es_kaiwa.png' },
-      { jp: 'sudeni', es: 'Ya', image_jp: 'U3/kaiwa/U3_09_sudeni_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_09_sudeni_es_kaiwa.png' },
-      { jp: 'jissaini', es: 'De hecho', image_jp: 'U3/kaiwa/U3_10_jissaini_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_10_jissaini_es_kaiwa.png' },
-      { jp: 'shakai', es: '社会', image_jp: 'U3/kaiwa/U3_11_shakai_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_11_shakai_es_kaiwa.png' },
-      { jp: 'katsuyaku', es: 'Estar activo', image_jp: 'U3/kaiwa/U3_12_katsuyaku_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_12_katsuyaku_es_kaiwa.png' },
-      { jp: 'rusuban', es: 'Cuidar la casa', image_jp: 'U3/kaiwa/U3_13_rusuban_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_13_rusuban_es_kaiwa.png' },
-      { jp: 'hakobu', es: 'Transportar', image_jp: 'U3/kaiwa/U3_14_hakobu_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_14_hakobu_es_kaiwa.png' },
-      { jp: 'ningen', es: 'Ser humano', image_jp: 'U3/kaiwa/U3_15_ningen_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_15_ningen_es_kaiwa.png' },
-      { jp: 'kurasu', es: 'Vivir', image_jp: 'U3/kaiwa/U3_16_kurasu_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_16_kurasu_es_kaiwa.png' },
-      { jp: 'toshi', es: 'Edad', image_jp: 'U3/kaiwa/U3_17_toshi_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_17_toshi_es_kaiwa.png' },
-      { jp: 'carehouse', es: 'Residencia de ancianos', image_jp: 'U3/kaiwa/U3_18_carehouse_jp_kaiwa.png', image_es: 'U3/kaiwa/U3_18_carehouse_es_kaiwa.png' }
-    ] 
+     { jp: 'gijutsu', es: 'Tecnología', image_jp: 'U3/yomimono/U3_01_gijutsu_jp_yomi.png', image_es: 'U3/yomimono/U3_01_gijutsu_es_yomi.png' },
+      { jp: 'hattatsu', es: 'Desarrollo', image_jp: 'U3/yomimono/U3_02_hattatsu_jp_yomi.png', image_es: 'U3/yomimono/U3_02_hattatsu_es_yomi.png' },
+      { jp: 'kaijou', es: 'Lugar de reunión', image_jp: 'U3/yomimono/U3_03_kaijou_jp_yomi.png', image_es: 'U3/yomimono/U3_03_kaijou_es_yomi.png' },
+      { jp: 'nigaoue', es: 'Retrato', image_jp: 'U3/yomimono/U3_04_nigaoue_jp_yomi.png', image_es: 'U3/yomimono/U3_04_nigaoue_es_yomi.png' },
+      { jp: 'kaku', es: 'Dibujar', image_jp: 'U3/yomimono/U3_05_kaku_jp_yomi.png', image_es: 'U3/yomimono/U3_05_kaku_es_yomi.png' },
+      { jp: 'kumo', es: 'Nube', image_jp: 'U3/yomimono/U3_06_kumo_jp_yomi.png', image_es: 'U3/yomimono/U3_06_kumo_es_yomi.png' },
+      { jp: 'tenjou', es: 'Techo', image_jp: 'U3/yomimono/U3_07_tenjou_jp_yomi.png', image_es: 'U3/yomimono/U3_07_tenjou_es_yomi.png' },
+      { jp: 'shujutsu', es: 'Operación', image_jp: 'U3/yomimono/U3_08_shujutsu_jp_yomi.png', image_es: 'U3/yomimono/U3_08_shujutsu_es_yomi.png' },
+      { jp: 'sudeni', es: 'Ya', image_jp: 'U3/yomimono/U3_09_sudeni_jp_yomi.png', image_es: 'U3/yomimono/U3_09_sudeni_es_yomi.png' },
+      { jp: 'jissaini', es: 'De hecho', image_jp: 'U3/yomimono/U3_10_jissaini_jp_yomi.png', image_es: 'U3/yomimono/U3_10_jissaini_es_yomi.png' },
+      { jp: 'shakai', es: '社会', image_jp: 'U3/yomimono/U3_11_shakai_jp_yomi.png', image_es: 'U3/yomimono/U3_11_shakai_es_yomi.png' },
+      { jp: 'katsuyaku', es: 'Estar activo', image_jp: 'U3/yomimono/U3_12_katsuyaku_jp_yomi.png', image_es: 'U3/yomimono/U3_12_katsuyaku_es_yomi.png' },
+      { jp: 'rusuban', es: 'Cuidar la casa', image_jp: 'U3/yomimono/U3_13_rusuban_jp_yomi.png', image_es: 'U3/yomimono/U3_13_rusuban_es_yomi.png' },
+      { jp: 'hakobu', es: 'Transportar', image_jp: 'U3/yomimono/U3_14_hakobu_jp_yomi.png', image_es: 'U3/yomimono/U3_14_hakobu_es_yomi.png' },
+      { jp: 'ningen', es: 'Ser humano', image_jp: 'U3/yomimono/U3_15_ningen_jp_yomi.png', image_es: 'U3/yomimono/U3_15_ningen_es_yomi.png' },
+      { jp: 'kurasu', es: 'Vivir', image_jp: 'U3/yomimono/U3_16_kurasu_jp_yomi.png', image_es: 'U3/yomimono/U3_16_kurasu_es_yomi.png' },
+      { jp: 'toshi', es: 'Edad', image_jp: 'U3/yomimono/U3_17_toshi_jp_yomi.png', image_es: 'U3/yomimono/U3_17_toshi_es_yomi.png' },
+      { jp: 'carehouse', es: 'Residencia de ancianos', image_jp: 'U3/yomimono/U3_18_carehouse_jp_yomi.png', image_es: 'U3/yomimono/U3_18_carehouse_es_yomi.png' }
+    ]
   },
   // =============================================
   // == ▼▼▼ 第2課～第15課のテスト用データ ▼▼▼ ==
@@ -222,6 +222,7 @@ const cardData = [
   { lesson: 15, topic: 'kaiwa', words: [ { jp: '第15課会話テスト', es: 'Prueba', image_jp: '', image_es: '' } ] },
   { lesson: 15, topic: 'yomi', words: [ { jp: '第15課読物テスト', es: 'Prueba', image_jp: '', image_es: '' } ] }
 ];
+
 
 
 
